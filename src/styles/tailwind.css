@@ -1,1 +1,9 @@
+/* stylelint-disable at-rule-no-unknown */
+
 @import 'tailwindcss';
+
+@theme {
+   --color-base-color: #4b7f52;
+   --color-light-color: #c0d8c2;
+   --color-dark-color: #2e4d31;
+}
