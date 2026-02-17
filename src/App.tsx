@@ -1,5 +1,6 @@
 import Header from './components/Header'
 import Intro from './components/Intro'
+import About from './components/About'
 
 export default function App() {
    return (
@@ -7,6 +8,7 @@ export default function App() {
          <Header />
          <main>
             <Intro />
+            <About />
          </main>
       </div>
    )

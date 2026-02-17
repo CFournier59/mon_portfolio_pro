@@ -1,5 +1,5 @@
 import { Github, Linkedin, Mail, ArrowDown } from 'lucide-react'
-import moi from '../../assets/moi.jpg'
+import profilePic from '../../assets/moi.jpg'
 
 export default function Intro() {
    const scrollToSection = (id: string) => {
@@ -18,7 +18,7 @@ export default function Intro() {
             <div className="max-w-4xl mx-auto text-center">
                <div className="mb-6">
                   <img
-                     src={moi}
+                     src={profilePic}
                      alt="Clément Fournier"
                      className="w-32 h-32 md:w-42 md:h-42 rounded-full mx-auto shadow-lg"
                   />
@@ -57,7 +57,7 @@ export default function Intro() {
 
                <div className="flex items-center justify-center gap-6">
                   <a
-                     href="https://github.com"
+                     href="https://github.com/CFournier59"
                      target="_blank"
                      rel="noopener noreferrer"
                      className="p-2 text-gray-600 hover:text-base-color transition-colors"
@@ -65,7 +65,7 @@ export default function Intro() {
                      <Github size={24} />
                   </a>
                   <a
-                     href="https://linkedin.com"
+                     href="https://www.linkedin.com/in/clément-fournier-38757b2bb/"
                      target="_blank"
                      rel="noopener noreferrer"
                      className="p-2 text-gray-600 hover:text-base-color transition-colors"
@@ -73,7 +73,7 @@ export default function Intro() {
                      <Linkedin size={24} />
                   </a>
                   <a
-                     href="mailto:alex@example.com"
+                     href="mailto:clementfournier.c@gmail.com"
                      className="p-2 text-gray-600 hover:text-base-color transition-colors"
                   >
                      <Mail size={24} />
