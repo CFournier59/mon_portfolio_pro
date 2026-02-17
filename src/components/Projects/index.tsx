@@ -41,8 +41,9 @@ export default function Projects() {
                <div className="text-center mb-16">
                   <h2 className="text-3xl sm:text-4xl mb-4">Projets récents</h2>
                   <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                     Here are some of my recent projects that showcase my skills
-                     and experience
+                     Voici quelques-uns de mes projets récents, mettant en avant
+                     mes compétences en développement web et ma capacité à créer
+                     des applications fonctionnelles et esthétiques.
                   </p>
                </div>
 
