@@ -33,7 +33,7 @@ export default function About() {
                         idées en réalité numérique.
                      </p>
                      <p className="text-justify text-gray-600">
-                        Quand de ne code pas, j'aime faire du vélo, explorer de
+                        Quand je ne code pas, j'aime faire du vélo, explorer de
                         nouveaux endroits et passer du temps avec mes amis. Je
                         crois que l'équilibre entre vie professionnelle et
                         personnelle est essentiel pour être un développeur
