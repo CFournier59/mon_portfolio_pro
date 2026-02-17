@@ -1,5 +1,5 @@
 import { Github, Linkedin, Mail, ArrowDown } from 'lucide-react'
-import moi from '../../assets/moi.jpg'
+import profilePic from '../../assets/moi.jpg'
 
 export default function Intro() {
    const scrollToSection = (id: string) => {
@@ -18,7 +18,7 @@ export default function Intro() {
             <div className="max-w-4xl mx-auto text-center">
                <div className="mb-6">
                   <img
-                     src={moi}
+                     src={profilePic}
                      alt="Clément Fournier"
                      className="w-32 h-32 md:w-42 md:h-42 rounded-full mx-auto shadow-lg"
                   />
