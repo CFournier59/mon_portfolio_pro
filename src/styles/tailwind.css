@@ -1,1 +1,10 @@
+/* stylelint-disable at-rule-no-unknown */
+
 @import 'tailwindcss';
+
+@theme {
+   --color-base-color: #4b7f52;
+   --color-base-hover-color: #2e4d31;
+   --color-light-color: #cce0ce;
+   --color-dark-color: #2e4d31;
+}
