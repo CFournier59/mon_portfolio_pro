@@ -54,7 +54,7 @@ export default function About() {
                      <div className="inline-flex items-center justify-center w-16 h-16 bg-light-color rounded-full mb-4">
                         <Code className="text-base-color" size={32} />
                      </div>
-                     <h4 className="text-xl mb-2">Clean Code</h4>
+                     <h3 className="text-xl mb-2">Clean Code</h3>
                      <p className="text-gray-600">
                         J'écris du code propre, maintenable et performant pour
                         des applications web de haute qualité
@@ -65,7 +65,7 @@ export default function About() {
                      <div className="inline-flex items-center justify-center w-16 h-16 bg-light-color rounded-full mb-4">
                         <Palette className="text-base-color" size={32} />
                      </div>
-                     <h4 className="text-xl mb-2">Design travaillé</h4>
+                     <h3 className="text-xl mb-2">Design travaillé</h3>
                      <p className="text-gray-600">
                         Je crée des interfaces utilisateur attrayantes avec une
                         attention portée à chaque détail.
@@ -76,7 +76,7 @@ export default function About() {
                      <div className="inline-flex items-center justify-center w-16 h-16 bg-light-color rounded-full mb-4">
                         <Rocket className="text-base-color" size={32} />
                      </div>
-                     <h4 className="text-xl mb-2">Rapidité et Performance</h4>
+                     <h3 className="text-xl mb-2">Rapidité et Performance</h3>
                      <p className="text-gray-600">
                         J'optimise les performances pour garantir des
                         expériences web rapides et fluides.

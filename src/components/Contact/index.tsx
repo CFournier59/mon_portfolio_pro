@@ -82,9 +82,9 @@ export default function Contact() {
                      </div>
 
                      <div className="mt-8 p-6 bg-gray-50 rounded-lg">
-                        <h4 className="mb-2">
+                        <h3 className="mb-2">
                            Donnez une vie digitale à vos idées !
-                        </h4>
+                        </h3>
                         <p className="text-gray-600">
                            Du commerce de proximité à des projets plus
                            ambitieux, quelque soit le domaine d'activité, je
@@ -155,7 +155,7 @@ export default function Contact() {
 
                         <button
                            type="submit"
-                           className="w-full px-8 py-3 bg-base-color text-white rounded-lg hover:bg-base-hover-color transition-colors"
+                           className="w-full px-8 py-3 bg-base-color text-white rounded-lg hover:bg-base-hover-color transition-colors cursor-pointer"
                         >
                            Envoyer
                         </button>
