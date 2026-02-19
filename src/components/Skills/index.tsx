@@ -29,6 +29,15 @@ const skillCategories = [
          { name: 'Visual Studio Code' },
       ],
    },
+   {
+      category: 'Certifications et savoir-faire',
+      skills: [
+         { name: 'Titre professionnel Développeur Web' },
+         { name: 'Google IT Support Specialist' },
+         { name: 'Méthodologie Agile' },
+         { name: 'Pratiques SEO' },
+      ],
+   },
 ]
 
 export default function Skills() {
@@ -46,7 +55,7 @@ export default function Skills() {
                   </p>
                </div>
 
-               <div className="grid md:grid-cols-3 gap-8">
+               <div className="grid md:grid-cols-2 gap-8">
                   {skillCategories.map((category, categoryIndex) => (
                      <div
                         key={categoryIndex}
