@@ -58,6 +58,7 @@ export default function Header() {
                <button
                   className="md:hidden p-2"
                   onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                  aria-label="Toggle mobile menu"
                >
                   {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
                </button>

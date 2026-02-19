@@ -61,17 +61,19 @@ export default function Footer() {
                            href="https://github.com/CFournier59"
                            target="_blank"
                            rel="noopener noreferrer"
-                           className="p-2 bg-black rounded-lg hover:bg-base-color transition-colors"
+                           className=" w-15 flex flex-col items-center gap-2 p-2 bg-black rounded-lg hover:bg-base-color transition-colors"
                         >
                            <Github size={20} />
+                           <p className="text-xs ">Github</p>
                         </a>
                         <a
                            href="https://www.linkedin.com/in/clément-fournier-38757b2bb/"
                            target="_blank"
                            rel="noopener noreferrer"
-                           className="p-2 bg-black rounded-lg hover:bg-base-color transition-colors"
+                           className=" w-15 flex flex-col items-center gap-2 p-2 bg-black rounded-lg hover:bg-base-color transition-colors"
                         >
                            <Linkedin size={20} />
+                           <p className="text-xs ">LinkedIn</p>
                         </a>
                      </div>
                   </div>
