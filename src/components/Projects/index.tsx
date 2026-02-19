@@ -1,15 +1,25 @@
 import kasaPicture from '../../assets/projects/kasa.png'
 import ninaCarducciPicture from '../../assets/projects/nina_carducci.png'
 import calculusPicture from '../../assets/projects/calculus.png'
-import { ExternalLink, Github } from 'lucide-react'
+import { ExternalLink, Github, Atom, CodeXml, TowerControl } from 'lucide-react'
+import jsIcon from '../../assets/logos/jsicon.svg'
+import sassIcon from '../../assets/logos/sassicon.svg'
+import cssIcon from '../../assets/logos/cssicon.svg'
+import jqueryIcon from '../../assets/logos/jqueryicon.png'
+import googleIcon from '../../assets/logos/googleicon.svg'
+import type { Project } from './types'
 
-const projects = [
+const projects: Project[] = [
    {
       title: 'Création de site web',
       description:
          "Kasa est une ébauche d'un site de location d'appartements entre particuliers, offrant une interface conviviale. Projet réalisé lors de ma formation chez OpenClassrooms.",
-      image: kasaPicture,
-      tags: ['React+Vite', 'JavaScript', 'Sass'],
+      image: { src: kasaPicture, alt: 'Aperçu du projet Kasa' },
+      tags: [
+         { text: 'React+Vite', icon: Atom, type: 'component' },
+         { text: 'JavaScript', icon: jsIcon, type: 'image' },
+         { text: 'Sass', icon: sassIcon, type: 'image' },
+      ],
       liveUrl: 'https://cfournier59.github.io/Kasa/',
       githubUrl: 'https://github.com/CFournier59/Kasa.git',
    },
@@ -17,8 +27,15 @@ const projects = [
       title: 'Debugging et Optimisation',
       description:
          "Les améliorations apportées au site de Nina Carducci ont permis d'augmenter la performance, l'accessibilité et le référencement, tout en corrigeant certains bugs. Projet réalisé lors de ma formation chez OpenClassrooms.",
-      image: ninaCarducciPicture,
-      tags: ['Jquery', 'Lighthouse/Wave', 'Google search console'],
+      image: {
+         src: ninaCarducciPicture,
+         alt: 'Aperçu du projet Nina Carducci',
+      },
+      tags: [
+         { text: 'JQuery', icon: jqueryIcon, type: 'image' },
+         { text: 'Lighthouse/Wave', icon: TowerControl, type: 'component' },
+         { text: 'Google Search Console', icon: googleIcon, type: 'image' },
+      ],
       liveUrl: 'https://cfournier59.github.io/Nina-Carducci-Dev/',
       githubUrl: 'https://github.com/CFournier59/Nina-Carducci-Dev.git',
    },
@@ -26,8 +43,12 @@ const projects = [
       title: 'Application web ludique',
       description:
          "Calculus est une application web ludique où l'utilisateur doit résoudre un maximum de calculs en 30 secondes. Il peut partager son score pour challenger ses amis. Projet perso réalisé pour sur mon temps libre.",
-      image: calculusPicture,
-      tags: ['Javascript', 'HTML', 'CSS'],
+      image: { src: calculusPicture, alt: 'Aperçu du projet Calculus' },
+      tags: [
+         { text: 'JavaScript', icon: jsIcon, type: 'image' },
+         { text: 'HTML', icon: CodeXml, type: 'component' },
+         { text: 'CSS', icon: cssIcon, type: 'image' },
+      ],
       liveUrl: 'https://cfournier59.github.io/Calculus/',
       githubUrl: 'https://github.com/CFournier59/Calculus.git',
    },
@@ -55,8 +76,8 @@ export default function Projects() {
                      >
                         <div className="relative h-48 overflow-hidden">
                            <img
-                              src={project.image}
-                              alt={project.title}
+                              src={project.image.src}
+                              alt={project.image.alt}
                               className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
                            />
                         </div>
@@ -66,14 +87,25 @@ export default function Projects() {
                               {project.description}
                            </p>
                            <div className="flex flex-wrap gap-2 mb-4">
-                              {project.tags.map((tag, tagIndex) => (
-                                 <span
-                                    key={tagIndex}
-                                    className="px-3 py-1 bg-light-color text-base-color rounded-full text-sm"
-                                 >
-                                    {tag}
-                                 </span>
-                              ))}
+                              {project.tags.map((tag, tagIndex) => {
+                                 return (
+                                    <span
+                                       key={tagIndex}
+                                       className="px-3 py-1 bg-light-color text-base-color rounded-full text-sm flex items-center gap-1"
+                                    >
+                                       {tag.type === 'component' ? (
+                                          <tag.icon size={16} />
+                                       ) : (
+                                          <img
+                                             src={tag.icon}
+                                             alt=""
+                                             className="w-4 h-4"
+                                          />
+                                       )}
+                                       {tag.text}
+                                    </span>
+                                 )
+                              })}
                            </div>
                            <div className="flex gap-4">
                               <a
