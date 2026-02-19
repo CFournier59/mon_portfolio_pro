@@ -24,31 +24,31 @@ export default function Header() {
                <nav className="hidden md:flex items-center gap-8">
                   <button
                      onClick={() => scrollToSection('home')}
-                     className="text-gray-700 hover:text-base-color transition-colors"
+                     className="text-gray-700 hover:text-base-color transition-colors cursor-pointer"
                   >
                      Accueil
                   </button>
                   <button
                      onClick={() => scrollToSection('about')}
-                     className="text-gray-700 hover:text-base-color transition-colors"
+                     className="text-gray-700 hover:text-base-color transition-colors cursor-pointer"
                   >
                      À propos
                   </button>
                   <button
                      onClick={() => scrollToSection('projects')}
-                     className="text-gray-700 hover:text-base-color transition-colors"
+                     className="text-gray-700 hover:text-base-color transition-colors cursor-pointer"
                   >
                      Projets
                   </button>
                   <button
                      onClick={() => scrollToSection('skills')}
-                     className="text-gray-700 hover:text-base-color transition-colors"
+                     className="text-gray-700 hover:text-base-color transition-colors cursor-pointer"
                   >
                      Compétences
                   </button>
                   <button
                      onClick={() => scrollToSection('contact')}
-                     className="px-4 py-2 bg-base-color text-white rounded-lg hover:bg-base-hover-color transition-colors"
+                     className="px-4 py-2 bg-base-color text-white rounded-lg hover:bg-base-hover-color transition-colors cursor-pointer"
                   >
                      Contact
                   </button>
@@ -94,7 +94,7 @@ export default function Header() {
                   </button>
                   <button
                      onClick={() => scrollToSection('contact')}
-                     className="px-4 py-2 bg-base-color text-white rounded-lg hover:bg-blue-700 transition-colors text-left"
+                     className="px-4 py-2 bg-base-color text-white rounded-lg hover:bg-dark-color transition-colors text-left"
                   >
                      Contact
                   </button>
