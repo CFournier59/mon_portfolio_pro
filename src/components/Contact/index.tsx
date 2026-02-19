@@ -1,4 +1,4 @@
-import { Mail, MapPin, Phone } from 'lucide-react'
+import { MapPin, Phone } from 'lucide-react'
 import { useState } from 'react'
 import emailjs from '@emailjs/browser'
 
@@ -60,18 +60,6 @@ export default function Contact() {
                   <div>
                      <h3 className="text-2xl mb-6">Coordonnées</h3>
                      <div className="space-y-6">
-                        <div className="flex items-start gap-4">
-                           <div className="p-3 bg-light-color rounded-lg">
-                              <Mail className="text-base-color" size={24} />
-                           </div>
-                           <div>
-                              <h4 className="mb-1">Email</h4>
-                              <p className="text-gray-600">
-                                 clementfournier.c@gmail.com
-                              </p>
-                           </div>
-                        </div>
-
                         <div className="flex items-start gap-4">
                            <div className="p-3 bg-light-color rounded-lg">
                               <Phone className="text-base-color" size={24} />
@@ -167,7 +155,7 @@ export default function Contact() {
 
                         <button
                            type="submit"
-                           className="w-full px-8 py-3 bg-base-color text-white rounded-lg hover:bg-base-hover-color transition-colors"
+                           className="w-full px-8 py-3 bg-base-color text-white rounded-lg hover:bg-base-hover-color transition-colors cursor-pointer"
                         >
                            Envoyer
                         </button>

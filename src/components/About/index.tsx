@@ -20,7 +20,7 @@ export default function About() {
                      <h3 className="text-2xl mb-4">Mon parcours</h3>
                      <p className="text-gray-600 mb-4">
                         J'ai commencé à m'intérresser au développement il y a
-                        quelques années, alors que je cherchait à découvrir de
+                        quelques années, alors que je cherchais à découvrir de
                         nouveaux horizons professionnels. Ce qui a commencé
                         comme une simple curiosité est devenu une carrière que
                         je suis vraiment passionné de faire.

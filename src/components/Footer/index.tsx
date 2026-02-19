@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail, Heart } from 'lucide-react'
+import { Github, Linkedin, Heart } from 'lucide-react'
 
 export default function Footer() {
    const currentYear = new Date().getFullYear()
@@ -72,12 +72,6 @@ export default function Footer() {
                            className="p-2 bg-black rounded-lg hover:bg-base-color transition-colors"
                         >
                            <Linkedin size={20} />
-                        </a>
-                        <a
-                           href="mailto:clementfournier.c@gmail.com"
-                           className="p-2 bg-black rounded-lg hover:bg-base-color transition-colors"
-                        >
-                           <Mail size={20} />
                         </a>
                      </div>
                   </div>
