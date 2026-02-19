@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail, ArrowDown } from 'lucide-react'
+import { Github, Linkedin, ArrowDown } from 'lucide-react'
 import profilePic from '../../assets/moi.jpg'
 
 export default function Intro() {
@@ -71,12 +71,6 @@ export default function Intro() {
                      className="p-2 text-gray-600 hover:text-base-color transition-colors"
                   >
                      <Linkedin size={24} />
-                  </a>
-                  <a
-                     href="mailto:clementfournier.c@gmail.com"
-                     className="p-2 text-gray-600 hover:text-base-color transition-colors"
-                  >
-                     <Mail size={24} />
                   </a>
                </div>
 
