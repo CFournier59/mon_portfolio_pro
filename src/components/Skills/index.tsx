@@ -5,7 +5,6 @@ const skillCategories = [
       category: 'Frontend',
       skills: [
          { name: 'React' },
-         { name: 'TypeScript' },
          { name: 'JavaScript' },
          { name: 'HTML/CSS' },
          { name: 'Tailwind CSS' },
