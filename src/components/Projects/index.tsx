@@ -8,7 +8,7 @@ const projects = [
       title: 'Création de site web',
       description:
          "Kasa est une ébauche d'un site de location d'appartements entre particuliers, offrant une interface conviviale. Projet réalisé lors de ma formation chez OpenClassrooms.",
-      image: kasaPicture,
+      image: { src: kasaPicture, alt: 'Aperçu du projet Kasa' },
       tags: ['React+Vite', 'JavaScript', 'Sass'],
       liveUrl: 'https://cfournier59.github.io/Kasa/',
       githubUrl: 'https://github.com/CFournier59/Kasa.git',
@@ -17,7 +17,10 @@ const projects = [
       title: 'Debugging et Optimisation',
       description:
          "Les améliorations apportées au site de Nina Carducci ont permis d'augmenter la performance, l'accessibilité et le référencement, tout en corrigeant certains bugs. Projet réalisé lors de ma formation chez OpenClassrooms.",
-      image: ninaCarducciPicture,
+      image: {
+         src: ninaCarducciPicture,
+         alt: 'Aperçu du projet Nina Carducci',
+      },
       tags: ['Jquery', 'Lighthouse/Wave', 'Google search console'],
       liveUrl: 'https://cfournier59.github.io/Nina-Carducci-Dev/',
       githubUrl: 'https://github.com/CFournier59/Nina-Carducci-Dev.git',
@@ -26,7 +29,7 @@ const projects = [
       title: 'Application web ludique',
       description:
          "Calculus est une application web ludique où l'utilisateur doit résoudre un maximum de calculs en 30 secondes. Il peut partager son score pour challenger ses amis. Projet perso réalisé pour sur mon temps libre.",
-      image: calculusPicture,
+      image: { src: calculusPicture, alt: 'Aperçu du projet Calculus' },
       tags: ['Javascript', 'HTML', 'CSS'],
       liveUrl: 'https://cfournier59.github.io/Calculus/',
       githubUrl: 'https://github.com/CFournier59/Calculus.git',
@@ -55,8 +58,8 @@ export default function Projects() {
                      >
                         <div className="relative h-48 overflow-hidden">
                            <img
-                              src={project.image}
-                              alt={project.title}
+                              src={project.image.src}
+                              alt={project.image.alt}
                               className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
                            />
                         </div>

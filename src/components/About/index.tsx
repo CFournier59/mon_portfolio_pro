@@ -18,21 +18,21 @@ export default function About() {
                <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
                   <div className="order-2 md:order-1">
                      <h3 className="text-2xl mb-4">Mon parcours</h3>
-                     <p className="text-justify text-gray-600 mb-4">
+                     <p className="text-gray-600 mb-4">
                         J'ai commencé à m'intérresser au développement il y a
                         quelques années, alors que je cherchait à découvrir de
                         nouveaux horizons professionnels. Ce qui a commencé
                         comme une simple curiosité est devenu une carrière que
                         je suis vraiment passionné de faire.
                      </p>
-                     <p className="text-justify text-gray-600 mb-4">
+                     <p className="text-gray-600 mb-4">
                         Au fil des années, j'ai pu acquérir une solide
                         expérience en travaillant avec des startups et des
                         entreprises établies. C'est cette pluralité que j'aime
                         insuffler dans mon travail, lorsque je transforme des
                         idées en réalité numérique.
                      </p>
-                     <p className="text-justify text-gray-600">
+                     <p className="text-gray-600">
                         Quand je ne code pas, j'aime faire du vélo, explorer de
                         nouveaux endroits et passer du temps avec mes amis. Je
                         crois que l'équilibre entre vie professionnelle et

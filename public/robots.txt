@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://cfournier59.github.io/mon_portfolio_pro/sitemap.xml
