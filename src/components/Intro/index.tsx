@@ -1,5 +1,6 @@
 import { Github, Linkedin, ArrowDown } from 'lucide-react'
-import profilePic from '../../assets/moi.jpg'
+// import profilePic from '../../assets/moi.jpg'
+import clementLogo from '../../assets/clementdeveloppe.svg'
 
 export default function Intro() {
    const scrollToSection = (id: string) => {
@@ -18,15 +19,16 @@ export default function Intro() {
             <div className="max-w-4xl mx-auto text-center">
                <div className="mb-6">
                   <img
-                     src={profilePic}
+                     src={clementLogo}
                      alt="Clément Fournier"
-                     className="w-32 h-32 md:w-42 md:h-42 rounded-full mx-auto shadow-lg"
+                     className="w-48 h-48 md:w-64 md:h-64 mx-auto"
                   />
                </div>
 
-               <h1 className="text-4xl sm:text-5xl lg:text-6xl mb-6">
-                  Bienvenue sur mon portfolio!<br></br>
-                  <span className="text-base-color">Clément Fournier</span>
+               <h1 className="text-4xl sm:text-5xl text-gray-600 lg:text-6xl mb-6">
+                  Un projet, une idée ?<br></br>
+                  <span className="text-base-color">Clément </span>
+                  <span className="text-black">Développe</span>
                </h1>
 
                <h2 className="text-2xl sm:text-3xl lg:text-4xl text-gray-600 mb-8">
@@ -34,10 +36,10 @@ export default function Intro() {
                </h2>
 
                <p className="text-lg text-gray-600 mb-10 max-w-2xl mx-auto">
-                  Je conçois et développe des expériences numériques modernes,
-                  performantes et accessibles. Avec une passion pour le code
-                  propre et les interfaces intuitives, je transforme les idées
-                  en réalité digitale.
+                  Je conçois des expériences numériques modernes, performantes
+                  et accessibles. Avec une passion pour le code propre et les
+                  interfaces intuitives, je transforme les idées en réalité
+                  digitale.
                </p>
 
                <div className="flex flex-wrap items-center justify-center gap-4 mb-12">
