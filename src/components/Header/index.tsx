@@ -16,8 +16,11 @@ export default function Header() {
       <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-200">
          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex items-center justify-between h-16">
-               <div className="text-xl font-semibold">
-                  <span className="text-base-color">Clément</span> Fournier
+               <div
+                  className="text-xl font-semibold"
+                  onClick={() => scrollToSection('home')}
+               >
+                  <span className="text-base-color">Clément</span> Développe
                </div>
 
                {/* Desktop Navigation */}
