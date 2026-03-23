@@ -6,6 +6,29 @@
 
 Vous trouverez dans ce projet un aperçu de mes créations en matière de développement web. Projet réalisé avec le framework react + vite , template TypeScript.
 
+## Mode d'emploi
+
+### Prérequis
+
+    - nodejs installé : https://nodejs.org/fr
+    - npm installé : https://docs.npmjs.com/downloading-and-installing-node-js-and-npm
+
+### 1 - Installation des dépendances
+
+    - Ouvrez un terminal dans le dossier racine du projet
+    - Executez sur le terminal la commande : npm install
+
+### 2 - Lancement du projet
+
+    - Executez sur le terminal la commande : npm run dev
+    - le projet est alors disponible à l'addresse : https://localhost:5173
+
+### Autres scripts
+
+    - compilation du projet : npm run build
+    - Aperçu du projet compilé : npm run preview (localhost:4173)
+    - lancement eslint : npm run lint
+
 ## Technologies utilisées
 
 - TypeScript

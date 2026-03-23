@@ -3,30 +3,23 @@ import { CheckLine } from 'lucide-react'
 const skillCategories = [
    {
       category: 'Frontend',
-      skills: [
-         { name: 'React' },
-         { name: 'TypeScript' },
-         { name: 'JavaScript' },
-         { name: 'HTML/CSS' },
-         { name: 'Tailwind CSS' },
-      ],
+      skills: ['React', 'JavaScript', 'HTML/CSS', 'Tailwind CSS'],
    },
    {
       category: 'Backend',
-      skills: [
-         { name: 'Node.js' },
-         { name: 'Express' },
-         { name: 'MongoDB' },
-         { name: 'REST APIs' },
-      ],
+      skills: ['Node.js', 'Express', 'MongoDB', 'REST APIs'],
    },
    {
       category: 'Outils de développement',
+      skills: ['Git', 'Lighthouse & Wave', 'Figma', 'Visual Studio Code'],
+   },
+   {
+      category: 'Certifications et savoir-faire',
       skills: [
-         { name: 'Git' },
-         { name: 'Lighthouse & Wave' },
-         { name: 'Figma' },
-         { name: 'Visual Studio Code' },
+         'Titre professionnel Développeur Web',
+         'Google IT Support Specialist',
+         'Méthodologie Agile',
+         'Pratiques SEO',
       ],
    },
 ]
@@ -46,7 +39,7 @@ export default function Skills() {
                   </p>
                </div>
 
-               <div className="grid md:grid-cols-3 gap-8">
+               <div className="grid md:grid-cols-2 gap-8">
                   {skillCategories.map((category, categoryIndex) => (
                      <div
                         key={categoryIndex}
@@ -60,7 +53,7 @@ export default function Skills() {
                               <div key={skillIndex}>
                                  <div className="flex justify-between mb-2">
                                     <span className="text-gray-700">
-                                       {skill.name}
+                                       {skill}
                                     </span>
                                     <CheckLine
                                        size={18}
