@@ -1,17 +1,30 @@
 import kasaPicture from '../../assets/projects/kasa.png'
 import ninaCarducciPicture from '../../assets/projects/nina_carducci.png'
-import calculusPicture from '../../assets/projects/calculus.png'
+import tmcPicture from '../../assets/projects/tmc.png'
 import { ExternalLink, Github, Atom, CodeXml, TowerControl } from 'lucide-react'
 import jsIcon from '../../assets/logos/jsicon.svg'
 import sassIcon from '../../assets/logos/sassicon.svg'
-import cssIcon from '../../assets/logos/cssicon.svg'
+import tailwindIcon from '../../assets/logos/tailwindicon.svg'
 import jqueryIcon from '../../assets/logos/jqueryicon.png'
 import googleIcon from '../../assets/logos/googleicon.svg'
 import type { Project } from './types'
 
 const projects: Project[] = [
    {
-      title: 'Création de site web',
+      title: 'Site vitrine et stratégie SEO',
+      description:
+         "L'entrepise de maçonnerie et rénovation TMC Rénov'a fait appel à mes services pour la création de son site web avec un développement orienté SEO. Résultat: un référencement local boosté pour se démarquer des concurrents et une image professionnelle affirmée.",
+      image: { src: tmcPicture, alt: "Aperçu du projet TMC Rénov'" },
+      tags: [
+         { text: 'JavaScript', icon: jsIcon, type: 'image' },
+         { text: 'HTML', icon: CodeXml, type: 'component' },
+         { text: 'Tailwind CSS', icon: tailwindIcon, type: 'image' },
+      ],
+      liveUrl: 'https://www.tmcrenov.com',
+      githubUrl: 'on demand',
+   },
+   {
+      title: "Création d'application web",
       description:
          "Kasa est une ébauche d'un site de location d'appartements entre particuliers, offrant une interface conviviale. Projet réalisé lors de ma formation chez OpenClassrooms.",
       image: { src: kasaPicture, alt: 'Aperçu du projet Kasa' },
@@ -39,22 +52,16 @@ const projects: Project[] = [
       liveUrl: 'https://cfournier59.github.io/Nina-Carducci-Dev/',
       githubUrl: 'https://github.com/CFournier59/Nina-Carducci-Dev.git',
    },
-   {
-      title: 'Application web ludique',
-      description:
-         "Calculus est une application web ludique où l'utilisateur doit résoudre un maximum de calculs en 30 secondes. Il peut partager son score pour challenger ses amis. Projet perso réalisé pour sur mon temps libre.",
-      image: { src: calculusPicture, alt: 'Aperçu du projet Calculus' },
-      tags: [
-         { text: 'JavaScript', icon: jsIcon, type: 'image' },
-         { text: 'HTML', icon: CodeXml, type: 'component' },
-         { text: 'CSS', icon: cssIcon, type: 'image' },
-      ],
-      liveUrl: 'https://cfournier59.github.io/Calculus/',
-      githubUrl: 'https://github.com/CFournier59/Calculus.git',
-   },
 ]
 
 export default function Projects() {
+   const scrollToSection = (id: string) => {
+      const element = document.getElementById(id)
+      if (element) {
+         element.scrollIntoView({ behavior: 'smooth' })
+      }
+   }
+
    return (
       <section id="projects" className="py-20 px-4 sm:px-6 lg:px-8">
          <div className="container mx-auto">
@@ -122,6 +129,14 @@ export default function Projects() {
                                  target="_blank"
                                  rel="noopener noreferrer"
                                  className="flex items-center gap-2 text-gray-600 hover:text-gray-700 transition-colors"
+                                 onClick={
+                                    project.githubUrl === 'on demand'
+                                       ? (e) => {
+                                            e.preventDefault()
+                                            scrollToSection('contact')
+                                         }
+                                       : undefined
+                                 }
                               >
                                  <Github size={18} />
                                  Code
