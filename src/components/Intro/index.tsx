@@ -1,6 +1,6 @@
 import { Github, Linkedin, ArrowDown } from 'lucide-react'
 // import profilePic from '../../assets/moi.jpg'
-import clementLogo from '../../assets/clementdeveloppe.svg'
+import clementLogo from '../../assets/clementdeveloppe.png'
 
 export default function Intro() {
    const scrollToSection = (id: string) => {
