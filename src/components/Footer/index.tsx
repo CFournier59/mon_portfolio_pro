@@ -9,7 +9,7 @@ export default function Footer() {
             <div className="max-w-6xl mx-auto">
                <div className="grid md:grid-cols-3 gap-8 mb-8">
                   <div>
-                     <h3 className="text-xl mb-4">Clément Fournier</h3>
+                     <h3 className="text-xl mb-4">Clément Développe</h3>
                      <p className="text-gray-300">
                         Conçoit et développe des solutions numériques modernes,
                         performantes et accessibles.
@@ -81,7 +81,7 @@ export default function Footer() {
 
                <div className="border-t border-black pt-8 text-center text-gray-300">
                   <p className="flex items-center justify-center gap-2">
-                     © {currentYear} Clément Fournier. Tous droits réservés.
+                     © {currentYear} Clément Développe. Tous droits réservés.
                   </p>
                   <p className="flex items-center justify-center gap-2">
                      Fait avec{' '}

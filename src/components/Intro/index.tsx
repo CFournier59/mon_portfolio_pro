@@ -20,7 +20,7 @@ export default function Intro() {
                <div className="mb-6">
                   <img
                      src={clementLogo}
-                     alt="Clément Fournier"
+                     alt="Clément Développe logo"
                      className="w-48 h-48 md:w-64 md:h-64 mx-auto"
                   />
                </div>
