@@ -18,21 +18,21 @@ export default function About() {
                <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
                   <div className="order-2 md:order-1">
                      <h3 className="text-2xl mb-4">Mon parcours</h3>
-                     <p className="text-justify text-gray-600 mb-4">
+                     <p className="text-gray-600 mb-4">
                         J'ai commencé à m'intérresser au développement il y a
-                        quelques années, alors que je cherchait à découvrir de
+                        quelques années, alors que je cherchais à découvrir de
                         nouveaux horizons professionnels. Ce qui a commencé
                         comme une simple curiosité est devenu une carrière que
                         je suis vraiment passionné de faire.
                      </p>
-                     <p className="text-justify text-gray-600 mb-4">
+                     <p className="text-gray-600 mb-4">
                         Au fil des années, j'ai pu acquérir une solide
                         expérience en travaillant avec des startups et des
                         entreprises établies. C'est cette pluralité que j'aime
                         insuffler dans mon travail, lorsque je transforme des
                         idées en réalité numérique.
                      </p>
-                     <p className="text-justify text-gray-600">
+                     <p className="text-gray-600">
                         Quand je ne code pas, j'aime faire du vélo, explorer de
                         nouveaux endroits et passer du temps avec mes amis. Je
                         crois que l'équilibre entre vie professionnelle et
@@ -54,7 +54,7 @@ export default function About() {
                      <div className="inline-flex items-center justify-center w-16 h-16 bg-light-color rounded-full mb-4">
                         <Code className="text-base-color" size={32} />
                      </div>
-                     <h4 className="text-xl mb-2">Clean Code</h4>
+                     <h3 className="text-xl mb-2">Clean Code</h3>
                      <p className="text-gray-600">
                         J'écris du code propre, maintenable et performant pour
                         des applications web de haute qualité
@@ -65,7 +65,7 @@ export default function About() {
                      <div className="inline-flex items-center justify-center w-16 h-16 bg-light-color rounded-full mb-4">
                         <Palette className="text-base-color" size={32} />
                      </div>
-                     <h4 className="text-xl mb-2">Design travaillé</h4>
+                     <h3 className="text-xl mb-2">Design travaillé</h3>
                      <p className="text-gray-600">
                         Je crée des interfaces utilisateur attrayantes avec une
                         attention portée à chaque détail.
@@ -76,7 +76,7 @@ export default function About() {
                      <div className="inline-flex items-center justify-center w-16 h-16 bg-light-color rounded-full mb-4">
                         <Rocket className="text-base-color" size={32} />
                      </div>
-                     <h4 className="text-xl mb-2">Rapidité et Performance</h4>
+                     <h3 className="text-xl mb-2">Rapidité et Performance</h3>
                      <p className="text-gray-600">
                         J'optimise les performances pour garantir des
                         expériences web rapides et fluides.

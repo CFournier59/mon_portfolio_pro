@@ -1,73 +1,42 @@
-# React + TypeScript + Vite
+![badgereact](https://forthebadge.com/api/badges/generate?panels=2&primaryLabel=framework&secondaryLabel=react+%2B+vite&primaryBGColor=%231c71d8&primaryTextColor=%23FFFFFF&secondaryBGColor=%2362a0ea&secondaryTextColor=%23FFFFFF&primaryFontSize=12&primaryFontWeight=600&primaryLetterSpacing=2&primaryFontFamily=Roboto&primaryTextTransform=uppercase&secondaryFontSize=12&secondaryFontWeight=900&secondaryLetterSpacing=2&secondaryFontFamily=Montserrat&secondaryTextTransform=uppercase&primaryIcon=vite&primaryIconColor=%23FFFFFF&primaryIconSize=24&primaryIconPosition=left)
+![badgetypescript](https://forthebadge.com/api/badges/generate?panels=2&primaryLabel=language&secondaryLabel=typescript&primaryBGColor=%233584e4&primaryTextColor=%23FFFFFF&secondaryBGColor=%2331c4f3&secondaryTextColor=%23FFFFFF&primaryFontSize=12&primaryFontWeight=600&primaryLetterSpacing=2&primaryFontFamily=Roboto&primaryTextTransform=uppercase&secondaryFontSize=12&secondaryFontWeight=900&secondaryLetterSpacing=2&secondaryFontFamily=Montserrat&secondaryTextTransform=uppercase&primaryIcon=typescript&primaryIconColor=%23FFFFFF&primaryIconSize=16&primaryIconPosition=left)
+![badgetailwindcss](https://forthebadge.com/api/badges/generate?panels=2&primaryLabel=Style&secondaryLabel=tailwind+css&primaryBGColor=%233584e4&primaryTextColor=%23FFFFFF&secondaryBGColor=%2331c4f3&secondaryTextColor=%23FFFFFF&primaryFontSize=12&primaryFontWeight=600&primaryLetterSpacing=2&primaryFontFamily=Roboto&primaryTextTransform=uppercase&secondaryFontSize=12&secondaryFontWeight=900&secondaryLetterSpacing=2&secondaryFontFamily=Montserrat&secondaryTextTransform=uppercase&primaryIcon=tailwindcss&primaryIconColor=%23FFFFFF&primaryIconSize=16&primaryIconPosition=left)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Mon_Portfolio_pro
 
-Currently, two official plugins are available:
+Vous trouverez dans ce projet un aperçu de mes créations en matière de développement web. Projet réalisé avec le framework react + vite , template TypeScript.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Mode d'emploi
 
-## React Compiler
+### Prérequis
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+    - nodejs installé : https://nodejs.org/fr
+    - npm installé : https://docs.npmjs.com/downloading-and-installing-node-js-and-npm
 
-## Expanding the ESLint configuration
+### 1 - Installation des dépendances
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+    - Ouvrez un terminal dans le dossier racine du projet
+    - Executez sur le terminal la commande : npm install
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### 2 - Lancement du projet
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+    - Executez sur le terminal la commande : npm run dev
+    - le projet est alors disponible à l'addresse : https://localhost:5173
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### Autres scripts
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+    - compilation du projet : npm run build
+    - Aperçu du projet compilé : npm run preview (localhost:4173)
+    - lancement eslint : npm run lint
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Technologies utilisées
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- TypeScript
+- Tailwind CSS
+- Email.JS
+- React + Vite
+- ESLint
+
+## Auteur
+
+Clément Fournier

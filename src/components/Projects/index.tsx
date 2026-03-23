@@ -1,15 +1,38 @@
 import kasaPicture from '../../assets/projects/kasa.png'
 import ninaCarducciPicture from '../../assets/projects/nina_carducci.png'
-import calculusPicture from '../../assets/projects/calculus.png'
-import { ExternalLink, Github } from 'lucide-react'
+import tmcPicture from '../../assets/projects/tmc.png'
+import { ExternalLink, Github, Atom, CodeXml, TowerControl } from 'lucide-react'
+import jsIcon from '../../assets/logos/jsicon.svg'
+import sassIcon from '../../assets/logos/sassicon.svg'
+import tailwindIcon from '../../assets/logos/tailwindicon.svg'
+import jqueryIcon from '../../assets/logos/jqueryicon.png'
+import googleIcon from '../../assets/logos/googleicon.svg'
+import type { Project } from './types'
 
-const projects = [
+const projects: Project[] = [
    {
-      title: 'Création de site web',
+      title: 'Site vitrine et stratégie SEO',
+      description:
+         "L'entrepise de maçonnerie et rénovation TMC Rénov'a fait appel à mes services pour la création de son site web avec un développement orienté SEO. Résultat: un référencement local boosté pour se démarquer des concurrents et une image professionnelle affirmée.",
+      image: { src: tmcPicture, alt: "Aperçu du projet TMC Rénov'" },
+      tags: [
+         { text: 'JavaScript', icon: jsIcon, type: 'image' },
+         { text: 'HTML', icon: CodeXml, type: 'component' },
+         { text: 'Tailwind CSS', icon: tailwindIcon, type: 'image' },
+      ],
+      liveUrl: 'https://www.tmcrenov.com',
+      githubUrl: 'on demand',
+   },
+   {
+      title: "Création d'application web",
       description:
          "Kasa est une ébauche d'un site de location d'appartements entre particuliers, offrant une interface conviviale. Projet réalisé lors de ma formation chez OpenClassrooms.",
-      image: kasaPicture,
-      tags: ['React+Vite', 'JavaScript', 'Sass'],
+      image: { src: kasaPicture, alt: 'Aperçu du projet Kasa' },
+      tags: [
+         { text: 'React+Vite', icon: Atom, type: 'component' },
+         { text: 'JavaScript', icon: jsIcon, type: 'image' },
+         { text: 'Sass', icon: sassIcon, type: 'image' },
+      ],
       liveUrl: 'https://cfournier59.github.io/Kasa/',
       githubUrl: 'https://github.com/CFournier59/Kasa.git',
    },
@@ -17,23 +40,28 @@ const projects = [
       title: 'Debugging et Optimisation',
       description:
          "Les améliorations apportées au site de Nina Carducci ont permis d'augmenter la performance, l'accessibilité et le référencement, tout en corrigeant certains bugs. Projet réalisé lors de ma formation chez OpenClassrooms.",
-      image: ninaCarducciPicture,
-      tags: ['Jquery', 'Lighthouse/Wave', 'Google search console'],
+      image: {
+         src: ninaCarducciPicture,
+         alt: 'Aperçu du projet Nina Carducci',
+      },
+      tags: [
+         { text: 'JQuery', icon: jqueryIcon, type: 'image' },
+         { text: 'Lighthouse/Wave', icon: TowerControl, type: 'component' },
+         { text: 'Google Search Console', icon: googleIcon, type: 'image' },
+      ],
       liveUrl: 'https://cfournier59.github.io/Nina-Carducci-Dev/',
       githubUrl: 'https://github.com/CFournier59/Nina-Carducci-Dev.git',
-   },
-   {
-      title: 'Application web ludique',
-      description:
-         "Calculus est une application web ludique où l'utilisateur doit résoudre un maximum de calculs en 30 secondes. Il peut partager son score pour challenger ses amis. Projet perso réalisé pour sur mon temps libre.",
-      image: calculusPicture,
-      tags: ['Javascript', 'HTML', 'CSS'],
-      liveUrl: 'https://cfournier59.github.io/Calculus/',
-      githubUrl: 'https://github.com/CFournier59/Calculus.git',
    },
 ]
 
 export default function Projects() {
+   const scrollToSection = (id: string) => {
+      const element = document.getElementById(id)
+      if (element) {
+         element.scrollIntoView({ behavior: 'smooth' })
+      }
+   }
+
    return (
       <section id="projects" className="py-20 px-4 sm:px-6 lg:px-8">
          <div className="container mx-auto">
@@ -55,8 +83,8 @@ export default function Projects() {
                      >
                         <div className="relative h-48 overflow-hidden">
                            <img
-                              src={project.image}
-                              alt={project.title}
+                              src={project.image.src}
+                              alt={project.image.alt}
                               className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
                            />
                         </div>
@@ -66,14 +94,25 @@ export default function Projects() {
                               {project.description}
                            </p>
                            <div className="flex flex-wrap gap-2 mb-4">
-                              {project.tags.map((tag, tagIndex) => (
-                                 <span
-                                    key={tagIndex}
-                                    className="px-3 py-1 bg-light-color text-base-color rounded-full text-sm"
-                                 >
-                                    {tag}
-                                 </span>
-                              ))}
+                              {project.tags.map((tag, tagIndex) => {
+                                 return (
+                                    <span
+                                       key={tagIndex}
+                                       className="px-3 py-1 bg-light-color text-base-color rounded-full text-sm flex items-center gap-1"
+                                    >
+                                       {tag.type === 'component' ? (
+                                          <tag.icon size={16} />
+                                       ) : (
+                                          <img
+                                             src={tag.icon}
+                                             alt=""
+                                             className="w-4 h-4"
+                                          />
+                                       )}
+                                       {tag.text}
+                                    </span>
+                                 )
+                              })}
                            </div>
                            <div className="flex gap-4">
                               <a
@@ -90,6 +129,14 @@ export default function Projects() {
                                  target="_blank"
                                  rel="noopener noreferrer"
                                  className="flex items-center gap-2 text-gray-600 hover:text-gray-700 transition-colors"
+                                 onClick={
+                                    project.githubUrl === 'on demand'
+                                       ? (e) => {
+                                            e.preventDefault()
+                                            scrollToSection('contact')
+                                         }
+                                       : undefined
+                                 }
                               >
                                  <Github size={18} />
                                  Code

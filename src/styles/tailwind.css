@@ -3,8 +3,8 @@
 @import 'tailwindcss';
 
 @theme {
-   --color-base-color: #4b7f52;
+   --color-base-color: #416e47;
    --color-base-hover-color: #2e4d31;
-   --color-light-color: #cce0ce;
+   --color-light-color: #e1ece2;
    --color-dark-color: #2e4d31;
 }
