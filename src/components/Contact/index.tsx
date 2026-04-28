@@ -45,12 +45,14 @@ export default function Contact() {
    }
 
    return (
-      <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8">
+      <section id="contact" className="bg-black py-20 px-4 sm:px-6 lg:px-8">
          <div className="container mx-auto">
             <div className="max-w-6xl mx-auto">
                <div className="text-center mb-16">
-                  <h2 className="text-3xl sm:text-4xl mb-4">Contactez-moi</h2>
-                  <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                  <h2 className="text-green text-3xl sm:text-4xl mb-4">
+                     Contactez-moi
+                  </h2>
+                  <p className="text-lg text-yellow max-w-2xl mx-auto">
                      Vous avez un projet en tête ou souhaitez simplement dire
                      bonjour ? N'hésitez pas à me contacter !
                   </p>
@@ -58,34 +60,34 @@ export default function Contact() {
 
                <div className="grid md:grid-cols-2 gap-12">
                   <div>
-                     <h3 className="text-2xl mb-6">Coordonnées</h3>
+                     <h3 className="text-orange text-2xl mb-6">Coordonnées</h3>
                      <div className="space-y-6">
                         <div className="flex items-start gap-4">
-                           <div className="p-3 bg-light-color rounded-lg">
-                              <Phone className="text-base-color" size={24} />
+                           <div className="p-3 bg-[#682a00] rounded-lg">
+                              <Phone className="text-orange" size={24} />
                            </div>
                            <div>
-                              <h4 className="mb-1">Téléphone</h4>
-                              <p className="text-gray-600">0 777 120 444</p>
+                              <h4 className="text-yellow mb-1">Téléphone</h4>
+                              <p className="text-white">0 777 120 444</p>
                            </div>
                         </div>
 
                         <div className="flex items-start gap-4">
-                           <div className="p-3 bg-light-color rounded-lg">
-                              <MapPin className="text-base-color" size={24} />
+                           <div className="p-3 bg-[#682a00] rounded-lg">
+                              <MapPin className="text-orange" size={24} />
                            </div>
                            <div>
-                              <h4 className="mb-1">Réside à</h4>
-                              <p className="text-gray-600">Vienne, Isère</p>
+                              <h4 className="text-yellow mb-1">Réside à</h4>
+                              <p className="text-white">Vienne, Isère</p>
                            </div>
                         </div>
                      </div>
 
-                     <div className="mt-8 p-6 bg-gray-50 rounded-lg">
-                        <h3 className="mb-2">
+                     <div className="mt-8 p-6 bg-black border-1 border-turquoise rounded-lg">
+                        <h3 className="text-turquoise mb-2">
                            Donnez une vie digitale à vos idées !
                         </h3>
-                        <p className="text-gray-600">
+                        <p className="text-white">
                            Du commerce de proximité à des projets plus
                            ambitieux, quelque soit le domaine d'activité, je
                            suis toujours ouvert à de nouvelles opportunités et
@@ -99,7 +101,7 @@ export default function Contact() {
                         <div>
                            <label
                               htmlFor="name"
-                              className="block mb-2 text-gray-700"
+                              className="block mb-2 text-yellow"
                            >
                               Nom
                            </label>
@@ -110,7 +112,7 @@ export default function Contact() {
                               value={formData.name}
                               onChange={handleChange}
                               required
-                              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-base-color focus:border-transparent"
+                              className="text-white w-full px-4 py-3 border border-pink rounded-lg focus:outline-none focus:ring-2 focus:ring-base-color focus:border-transparent"
                               placeholder="Nom complet"
                            />
                         </div>
@@ -118,7 +120,7 @@ export default function Contact() {
                         <div>
                            <label
                               htmlFor="email"
-                              className="block mb-2 text-gray-700"
+                              className="block mb-2 text-yellow"
                            >
                               Email
                            </label>
@@ -129,7 +131,7 @@ export default function Contact() {
                               value={formData.email}
                               onChange={handleChange}
                               required
-                              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-base-color focus:border-transparent"
+                              className="text-white w-full px-4 py-3 border border-pink rounded-lg focus:outline-none focus:ring-2 focus:ring-base-color focus:border-transparent"
                               placeholder="votre.email@example.com"
                            />
                         </div>
@@ -137,7 +139,7 @@ export default function Contact() {
                         <div>
                            <label
                               htmlFor="message"
-                              className="block mb-2 text-gray-700"
+                              className="block mb-2 text-yellow"
                            >
                               Message
                            </label>
@@ -148,14 +150,14 @@ export default function Contact() {
                               onChange={handleChange}
                               required
                               rows={5}
-                              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-base-color focus:border-transparent resize-none"
+                              className="text-white w-full px-4 py-3 border border-pink rounded-lg focus:outline-none focus:ring-2 focus:ring-base-color focus:border-transparent resize-none"
                               placeholder="Votre message..."
                            />
                         </div>
 
                         <button
                            type="submit"
-                           className="w-full px-8 py-3 bg-base-color text-white rounded-lg hover:bg-base-hover-color transition-colors cursor-pointer"
+                           className="w-full px-8 py-3 text-pink hover:border-orange hover:text-orange transition-colors cursor-pointer border border-pink"
                         >
                            Envoyer
                         </button>

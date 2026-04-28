@@ -4,13 +4,15 @@ export default function Footer() {
    const currentYear = new Date().getFullYear()
 
    return (
-      <footer className="bg-dark-color text-white py-12 px-4 sm:px-6 lg:px-8">
+      <footer className="border-t border-yellow bg-black text-white py-12 px-4 sm:px-6 lg:px-8">
          <div className="container mx-auto">
             <div className="max-w-6xl mx-auto">
                <div className="grid md:grid-cols-3 gap-8 mb-8">
                   <div>
-                     <h3 className="text-xl mb-4">Clément Développe</h3>
-                     <p className="text-gray-300">
+                     <h3 className="text-turquoise text-xl mb-4">
+                        <span className="text-orange">Clément</span> Développe
+                     </h3>
+                     <p className="">
                         Conçoit et développe des solutions numériques modernes,
                         performantes et accessibles.
                      </p>
@@ -18,11 +20,11 @@ export default function Footer() {
 
                   <div>
                      <h3 className="text-lg mb-4">Navigation</h3>
-                     <ul className="space-y-2">
+                     <ul className="space-y-2 text-pink">
                         <li>
                            <a
                               href="#home"
-                              className="text-gray-300 hover:text-base-color transition-colors"
+                              className=" hover:text-orange transition-colors"
                            >
                               Accueil
                            </a>
@@ -30,7 +32,7 @@ export default function Footer() {
                         <li>
                            <a
                               href="#about"
-                              className="text-gray-300 hover:text-base-color transition-colors"
+                              className=" hover:text-orange transition-colors"
                            >
                               À propos
                            </a>
@@ -38,7 +40,7 @@ export default function Footer() {
                         <li>
                            <a
                               href="#projects"
-                              className="text-gray-300 hover:text-base-color transition-colors"
+                              className=" hover:text-orange transition-colors"
                            >
                               Projets
                            </a>
@@ -46,7 +48,7 @@ export default function Footer() {
                         <li>
                            <a
                               href="#contact"
-                              className="text-gray-300 hover:text-base-color transition-colors"
+                              className=" hover:text-orange transition-colors"
                            >
                               Contact
                            </a>
@@ -61,7 +63,7 @@ export default function Footer() {
                            href="https://github.com/CFournier59"
                            target="_blank"
                            rel="noopener noreferrer"
-                           className=" w-15 flex flex-col items-center gap-2 p-2 bg-black rounded-lg hover:bg-base-color transition-colors"
+                           className=" w-15 flex flex-col items-center gap-2 p-2 text-pink hover:text-orange transition-colors"
                         >
                            <Github size={20} />
                            <p className="text-xs ">Github</p>
@@ -70,7 +72,7 @@ export default function Footer() {
                            href="https://www.linkedin.com/in/clément-fournier-38757b2bb/"
                            target="_blank"
                            rel="noopener noreferrer"
-                           className=" w-15 flex flex-col items-center gap-2 p-2 bg-black rounded-lg hover:bg-base-color transition-colors"
+                           className=" w-15 flex flex-col items-center gap-2 p-2 text-pink hover:text-orange transition-colors"
                         >
                            <Linkedin size={20} />
                            <p className="text-xs ">LinkedIn</p>
@@ -79,7 +81,7 @@ export default function Footer() {
                   </div>
                </div>
 
-               <div className="border-t border-black pt-8 text-center text-gray-300">
+               <div className="border-t border-black pt-8 text-center ">
                   <p className="flex items-center justify-center gap-2">
                      © {currentYear} Clément Développe. Tous droits réservés.
                   </p>
