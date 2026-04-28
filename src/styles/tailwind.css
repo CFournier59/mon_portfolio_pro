@@ -3,8 +3,27 @@
 @import 'tailwindcss';
 
 @theme {
-   --color-base-color: #416e47;
-   --color-base-hover-color: #2e4d31;
-   --color-light-color: #e1ece2;
-   --color-dark-color: #2e4d31;
+   --color-pink: #fe00a9;
+   --color-turquoise: #00fed4;
+   --color-yellow: #fefe00;
+   --color-green: #5bff09;
+   --color-orange: #fd6500;
+}
+
+* {
+   font-family: 'Play', sans-serif;
+   font-weight: 400;
+   font-style: normal;
+}
+
+.play-bold {
+   font-family: 'Play', sans-serif;
+   font-weight: 700;
+   font-style: normal;
+}
+
+@keyframes sheen {
+   100% {
+      transform: rotateZ(60deg) translate(1em, -9em);
+   }
 }

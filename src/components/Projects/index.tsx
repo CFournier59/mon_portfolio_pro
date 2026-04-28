@@ -1,8 +1,10 @@
 import kasaPicture from '../../assets/projects/kasa.png'
 import ninaCarducciPicture from '../../assets/projects/nina_carducci.png'
 import tmcPicture from '../../assets/projects/tmc.png'
+import emmaPicture from '../../assets/projects/emma_imberlin.png'
 import { ExternalLink, Github, Atom, CodeXml, TowerControl } from 'lucide-react'
-import jsIcon from '../../assets/logos/jsicon.svg'
+import jsIcon from '../../assets/logos/jsicon.png'
+import tsIcon from '../../assets/logos/tsicon.png'
 import sassIcon from '../../assets/logos/sassicon.svg'
 import tailwindIcon from '../../assets/logos/tailwindicon.svg'
 import jqueryIcon from '../../assets/logos/jqueryicon.png'
@@ -10,6 +12,19 @@ import googleIcon from '../../assets/logos/googleicon.svg'
 import type { Project } from './types'
 
 const projects: Project[] = [
+   {
+      title: 'Emma Imberlin, psychologue clinicienne',
+      description:
+         'Le design et la charte graphique du site ont été pensés autour du logo fourni par Emma. En plus de proposer une interface intuitive et épurée pour tous les formats. Les utilisateurs peuvent prendre rendez-vous directement via une API de google intégrée au site. ',
+      image: { src: emmaPicture, alt: 'Aperçu du projet Emma Imberlin' },
+      tags: [
+         { text: 'React', icon: Atom, type: 'component' },
+         { text: 'TypeScript', icon: tsIcon, type: 'image' },
+         { text: 'Tailwind CSS', icon: tailwindIcon, type: 'image' },
+      ],
+      liveUrl: 'https://emma-psy.com',
+      githubUrl: 'on demand',
+   },
    {
       title: 'Site vitrine et stratégie SEO',
       description:
@@ -29,7 +44,7 @@ const projects: Project[] = [
          "Kasa est une ébauche d'un site de location d'appartements entre particuliers, offrant une interface conviviale. Projet réalisé lors de ma formation chez OpenClassrooms.",
       image: { src: kasaPicture, alt: 'Aperçu du projet Kasa' },
       tags: [
-         { text: 'React+Vite', icon: Atom, type: 'component' },
+         { text: 'React', icon: Atom, type: 'component' },
          { text: 'JavaScript', icon: jsIcon, type: 'image' },
          { text: 'Sass', icon: sassIcon, type: 'image' },
       ],
@@ -63,12 +78,14 @@ export default function Projects() {
    }
 
    return (
-      <section id="projects" className="py-20 px-4 sm:px-6 lg:px-8">
+      <section id="projects" className="bg-black py-20 px-4 sm:px-6 lg:px-8">
          <div className="container mx-auto">
             <div className="max-w-6xl mx-auto">
                <div className="text-center mb-16">
-                  <h2 className="text-3xl sm:text-4xl mb-4">Projets récents</h2>
-                  <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                  <h2 className="text-green text-3xl sm:text-4xl mb-4">
+                     Projets récents
+                  </h2>
+                  <p className="text-lg text-yellow max-w-2xl mx-auto">
                      Voici quelques-uns de mes projets récents, mettant en avant
                      mes compétences en développement web et ma capacité à créer
                      des applications fonctionnelles et esthétiques.
@@ -79,18 +96,20 @@ export default function Projects() {
                   {projects.map((project, index) => (
                      <div
                         key={index}
-                        className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
+                        className="border-1 border-turquoise bg-black rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
                      >
                         <div className="relative h-48 overflow-hidden">
                            <img
                               src={project.image.src}
                               alt={project.image.alt}
-                              className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+                              className="w-full h-full object-cover"
                            />
                         </div>
                         <div className="p-6">
-                           <h3 className="text-xl mb-2">{project.title}</h3>
-                           <p className="text-gray-600 mb-4">
+                           <h3 className="text-turquoise text-xl mb-2">
+                              {project.title}
+                           </h3>
+                           <p className="text-white mb-4">
                               {project.description}
                            </p>
                            <div className="flex flex-wrap gap-2 mb-4">
@@ -98,7 +117,7 @@ export default function Projects() {
                                  return (
                                     <span
                                        key={tagIndex}
-                                       className="px-3 py-1 bg-light-color text-base-color rounded-full text-sm flex items-center gap-1"
+                                       className="px-3 py-1 bg-[#006756] text-turquoise rounded-full text-sm flex items-center gap-1"
                                     >
                                        {tag.type === 'component' ? (
                                           <tag.icon size={16} />
@@ -119,7 +138,7 @@ export default function Projects() {
                                  href={project.liveUrl}
                                  target="_blank"
                                  rel="noopener noreferrer"
-                                 className="flex items-center gap-2 text-base-color hover:text-base-hover-color transition-colors"
+                                 className="flex items-center gap-2 text-pink hover:text-orange transition-colors"
                               >
                                  <ExternalLink size={18} />
                                  Lien direct
@@ -128,7 +147,7 @@ export default function Projects() {
                                  href={project.githubUrl}
                                  target="_blank"
                                  rel="noopener noreferrer"
-                                 className="flex items-center gap-2 text-gray-600 hover:text-gray-700 transition-colors"
+                                 className="flex items-center gap-2 text-pink hover:text-orange transition-colors"
                                  onClick={
                                     project.githubUrl === 'on demand'
                                        ? (e) => {
