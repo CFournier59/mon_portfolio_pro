@@ -1,10 +1,10 @@
-import kasaPicture from '../../assets/projects/kasa.png'
-import ninaCarducciPicture from '../../assets/projects/nina_carducci.png'
-import tmcPicture from '../../assets/projects/tmc.png'
-import emmaPicture from '../../assets/projects/emma_imberlin.png'
+import kasaPicture from '../../assets/projects/kasa.webp'
+import ninaCarducciPicture from '../../assets/projects/nina_carducci.webp'
+import tmcPicture from '../../assets/projects/tmc.webp'
+import emmaPicture from '../../assets/projects/emma_imberlin.webp'
 import { ExternalLink, Github, Atom, CodeXml, TowerControl } from 'lucide-react'
-import jsIcon from '../../assets/logos/jsicon.png'
-import tsIcon from '../../assets/logos/tsicon.png'
+import jsIcon from '../../assets/logos/jsicon.webp'
+import tsIcon from '../../assets/logos/tsicon.webp'
 import sassIcon from '../../assets/logos/sassicon.svg'
 import tailwindIcon from '../../assets/logos/tailwindicon.svg'
 import jqueryIcon from '../../assets/logos/jqueryicon.png'
@@ -15,7 +15,7 @@ const projects: Project[] = [
    {
       title: 'Emma Imberlin, psychologue clinicienne',
       description:
-         'Le design et la charte graphique du site ont été pensés autour du logo fourni par Emma. En plus de proposer une interface intuitive et épurée pour tous les formats. Les utilisateurs peuvent prendre rendez-vous directement via une API de google intégrée au site. ',
+         'Le design et la charte graphique du site ont été pensés autour du logo fourni par Emma. Grâce à une interface intuitive et épurée sur tous les supports, les utilisateurs peuvent réserver une consultation directement via une API de google intégrée au site. ',
       image: { src: emmaPicture, alt: 'Aperçu du projet Emma Imberlin' },
       tags: [
          { text: 'React', icon: Atom, type: 'component' },
