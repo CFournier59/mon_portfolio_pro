@@ -19,7 +19,7 @@ export default function About() {
 
                <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
                   <div className="order-2 md:order-1">
-                     <h3 className="text-2xl mb-4">Mon parcours</h3>
+                     <h3 className="text-orange text-2xl mb-4">Mon parcours</h3>
                      <p className="text-white mb-4">
                         J'ai commencé à m'intérresser au développement il y a
                         quelques années, alors que je cherchais à découvrir de
