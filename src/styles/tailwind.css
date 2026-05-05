@@ -8,12 +8,37 @@
    --color-yellow: #fefe00;
    --color-green: #5bff09;
    --color-orange: #fd6500;
+   --color-blue: #1b2cc1;
+}
+
+@font-face {
+   font-family: 'pointless';
+   src: url('/fonts/Pointless.woff2') format('woff2');
+   font-weight: 400;
+   font-style: normal;
+   font-display: optional;
+}
+
+@font-face {
+   font-family: 'squarified';
+   src: url('/fonts/Squarified.woff2') format('woff2');
+   font-weight: 400;
+   font-style: normal;
+   font-display: optional;
 }
 
 * {
-   font-family: 'Play', sans-serif;
-   font-weight: 400;
+   font-family: 'Momo Trust Sans', sans-serif;
+   font-optical-sizing: auto;
    font-style: normal;
+}
+
+.pointless {
+   font-family: pointless, sans-serif;
+}
+
+.squarified {
+   font-family: squarified, sans-serif;
 }
 
 .play-bold {
