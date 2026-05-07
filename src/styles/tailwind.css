@@ -3,8 +3,79 @@
 @import 'tailwindcss';
 
 @theme {
-   --color-base-color: #4b7f52;
-   --color-base-hover-color: #3c6742;
-   --color-light-color: #c0d8c2;
-   --color-dark-color: #2e4d31;
+   --color-pink: #fe00a9;
+   --color-turquoise: #00fed4;
+   --color-yellow: #fefe00;
+   --color-green: #5bff09;
+   --color-orange: #fd6500;
+   --color-blue: #1b2cc1;
+   --color-dkblue: #0b1047;
+   --color-ltblue: #a6adf2;
+}
+
+/* fonts */
+
+@font-face {
+   font-family: 'pointless';
+   src: url('/fonts/Pointless.woff2') format('woff2');
+   font-weight: 400;
+   font-style: normal;
+   font-display: optional;
+}
+
+@font-face {
+   font-family: 'squarified';
+   src: url('/fonts/Squarified.woff2') format('woff2');
+   font-weight: 400;
+   font-style: normal;
+   font-display: optional;
+}
+
+* {
+   font-family: 'Momo Trust Sans', sans-serif;
+   font-optical-sizing: auto;
+   font-style: normal;
+}
+
+.pointless {
+   font-family: pointless, sans-serif;
+}
+
+.squarified {
+   font-family: squarified, sans-serif;
+}
+
+.play-bold {
+   font-family: 'Play', sans-serif;
+   font-weight: 700;
+   font-style: normal;
+}
+
+/* gradients */
+
+.about-gradient {
+   background: #ffffff;
+   background: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 1) 97%,
+      rgba(30, 35, 54, 1) 100%
+   );
+}
+
+.gradient1 {
+   background: var(--color-dkblue);
+   background: linear-gradient(
+      0deg,
+      rgba(11, 16, 71, 1) 97%,
+      rgba(255, 255, 255, 1) 100%
+   );
+}
+
+.gradient2 {
+   background: white;
+   background: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 1) 95%,
+      rgba(11, 16, 71, 1) 100%
+   );
 }
