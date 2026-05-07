@@ -1,0 +1,82 @@
+############################################
+# 🔒 1) Redirections canoniques (SEO)
+############################################
+RewriteEngine On
+
+# --- HTTP -> HTTPS ---
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://clementdeveloppe.ovh/$1 [L,R=301]
+
+# --- non-www -> www ---
+RewriteCond %{HTTP_HOST} ^www\.clementdeveloppe\.ovh$ [NC]
+RewriteRule ^(.*)$ https://clementdeveloppe.ovh/$1 [L,R=301]
+
+
+############################################
+# 🛡️ 2) Sécurité (headers HTTP)
+############################################
+
+# Empêche l’iframe (clickjacking)
+Header always set X-Frame-Options "SAMEORIGIN"
+
+# Empêche l’interprétation de fichiers comme un autre type
+Header always set X-Content-Type-Options "nosniff"
+
+# Active la protection XSS du navigateur
+Header always set X-XSS-Protection "1; mode=block"
+
+# Politique de referrer (SEO + confidentialité)
+Header always set Referrer-Policy "strict-origin-when-cross-origin"
+
+# Politique de permissions (limite les API sensibles)
+Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+
+# Politique de sécurité du contenu (CSP) — version permissive mais protectrice
+Header always set Content-Security-Policy "default-src 'self' https: data: 'unsafe-inline' 'unsafe-eval'; img-src 'self' https: data:;"
+
+############################################
+# ⚡ 3) Compression Gzip/Brotli (performance)
+############################################
+
+# Compression Gzip
+AddOutputFilterByType DEFLATE text/html text/plain text/css text/javascript application/javascript application/json application/xml image/svg+xml
+
+# Compression Brotli (si activée sur OVH)
+<IfModule mod_brotli.c>
+  BrotliCompressionQuality 5
+  AddOutputFilterByType BROTLI_COMPRESS text/html text/plain text/css text/javascript application/javascript application/json application/xml image/svg+xml
+</IfModule>
+
+############################################
+# 🚀 4) Cache navigateur (optimisation vitesse)
+############################################
+
+<IfModule mod_expires.c>
+  ExpiresActive On
+
+  # Images : 1 an
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/gif "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+
+  # CSS & JS : 1 mois
+  ExpiresByType text/css "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+
+  # HTML : 1 heure
+  ExpiresByType text/html "access plus 1 hour"
+</IfModule>
+
+############################################
+# 🛑 5) Protection hotlinking (empêche vol d’images)
+############################################
+
+RewriteCond %{HTTP_REFERER} !^https://(www\.)?clementdeveloppe\.ovh/ [NC]
+RewriteCond %{HTTP_REFERER} !^$
+RewriteRule \.(jpg|jpeg|png|gif|webp)$ - [F,NC]
+
+############################################
+# ✔️ Fin du fichier
+############################################

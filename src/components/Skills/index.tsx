@@ -26,14 +26,14 @@ const skillCategories = [
 
 export default function Skills() {
    return (
-      <section id="skills" className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
+      <section id="skills" className="py-20 px-4 sm:px-6 lg:px-8 gradient2">
          <div className="container mx-auto">
             <div className="max-w-6xl mx-auto">
                <div className="text-center mb-16">
-                  <h2 className="text-3xl sm:text-4xl mb-4">
+                  <h2 className="text-blue text-3xl sm:text-4xl mb-4">
                      Compétences & Expertise
                   </h2>
-                  <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                  <p className="text-lg text-dkblue max-w-2xl mx-auto">
                      Technologies et outils que j'utilise, pour donner vie à mes
                      projets.
                   </p>
@@ -43,21 +43,19 @@ export default function Skills() {
                   {skillCategories.map((category, categoryIndex) => (
                      <div
                         key={categoryIndex}
-                        className="bg-white p-6 rounded-lg shadow-md"
+                        className={` border-1 border-ltblue p-6 rounded-lg shadow-lg`}
                      >
-                        <h3 className="text-xl mb-6 text-base-color">
+                        <h3 className={`text-xl mb-6 text-blue`}>
                            {category.category}
                         </h3>
                         <div className="space-y-4">
                            {category.skills.map((skill, skillIndex) => (
                               <div key={skillIndex}>
                                  <div className="flex justify-between mb-2">
-                                    <span className="text-gray-700">
-                                       {skill}
-                                    </span>
+                                    <span className="">{skill}</span>
                                     <CheckLine
                                        size={18}
-                                       className="text-base-color ml-2"
+                                       className={`text-dkblue ml-2`}
                                     />
                                  </div>
                               </div>
