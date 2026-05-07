@@ -35,13 +35,13 @@ export default function Intro() {
                <div className="flex flex-wrap items-center justify-center gap-4 mb-12">
                   <button
                      onClick={() => scrollToSection('projects')}
-                     className="border border-blue px-8 py-3 bg-white/60 text-blue  hover:text-white hover:bg-blue transition-colors rounded-full font-semibold shadow-lg"
+                     className=" px-8 py-3 bg-white/60 text-dkblue  hover:text-white hover:bg-dkblue transition-colors rounded-full font-semibold shadow-lg"
                   >
                      Voir mes projets
                   </button>
                   <button
                      onClick={() => scrollToSection('contact')}
-                     className="border border-blue px-8 py-3 bg-white/60 text-blue  hover:text-white hover:bg-blue transition-colors rounded-full font-semibold shadow-lg"
+                     className=" px-8 py-3 bg-white/60 text-dkblue  hover:text-white hover:bg-dkblue transition-colors rounded-full font-semibold shadow-lg"
                   >
                      Contactez-moi
                   </button>
@@ -52,7 +52,7 @@ export default function Intro() {
                      href="https://github.com/CFournier59"
                      target="_blank"
                      rel="noopener noreferrer"
-                     className="flex flex-col items-center gap-2 text-pink hover:text-orange transition-colors"
+                     className="size-18 flex flex-col justify-center items-center gap-1 bg-white/60 text-dkblue hover:text-white hover:bg-dkblue rounded-full transition-colors shadow-lg"
                   >
                      <Github size={24} />
                      <p className="text-xs ">Github</p>
@@ -61,7 +61,7 @@ export default function Intro() {
                      href="https://www.linkedin.com/in/clément-fournier-38757b2bb/"
                      target="_blank"
                      rel="noopener noreferrer"
-                     className="flex flex-col items-center gap-2 text-pink hover:text-orange transition-colors"
+                     className="size-18 flex flex-col justify-center items-center gap-1 bg-white/60 text-dkblue hover:text-white hover:bg-dkblue rounded-full transition-colors shadow-lg"
                   >
                      <Linkedin size={24} />
                      <p className="text-xs ">LinkedIn</p>
@@ -70,10 +70,10 @@ export default function Intro() {
 
                <button
                   onClick={() => scrollToSection('about')}
-                  className="mt-16 animate-bounce text-pink hover:text-orange transition-colors"
+                  className="mt-16 animate-bounce text-white cursor-pointer transition-colors"
                   aria-label="Scroll down to about section"
                >
-                  <ArrowDown size={32} />
+                  <ArrowDown size={38} />
                </button>
             </div>
          </div>

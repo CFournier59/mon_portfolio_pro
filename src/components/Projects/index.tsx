@@ -78,14 +78,14 @@ export default function Projects() {
    }
 
    return (
-      <section id="projects" className="bg-black py-20 px-4 sm:px-6 lg:px-8">
+      <section id="projects" className="gradient1 py-20 px-4 sm:px-6 lg:px-8">
          <div className="container mx-auto">
             <div className="max-w-6xl mx-auto">
                <div className="text-center mb-16">
-                  <h2 className="text-green text-3xl sm:text-4xl mb-4">
+                  <h2 className="text-ltblue text-3xl sm:text-4xl mb-4">
                      Projets récents
                   </h2>
-                  <p className="text-lg text-yellow max-w-2xl mx-auto">
+                  <p className="text-white text-lg max-w-2xl mx-auto">
                      Voici quelques-uns de mes projets récents, mettant en avant
                      mes compétences en développement web et ma capacité à créer
                      des applications fonctionnelles et esthétiques.
@@ -96,49 +96,50 @@ export default function Projects() {
                   {projects.map((project, index) => (
                      <div
                         key={index}
-                        className="border-1 border-turquoise bg-black rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
+                        className="bg-white shadow-lg hover:shadow-xl transition-shadow rounded-md h-full flex flex-col"
                      >
-                        <div className="relative h-48 overflow-hidden">
+                        <div className="relative h-55 p-4">
                            <img
                               src={project.image.src}
                               alt={project.image.alt}
-                              className="w-full h-full object-cover"
+                              className="w-full h-full object-cover rounded-md"
                            />
                         </div>
-                        <div className="p-6">
-                           <h3 className="text-turquoise text-xl mb-2">
-                              {project.title}
-                           </h3>
-                           <p className="text-white mb-4">
-                              {project.description}
-                           </p>
-                           <div className="flex flex-wrap gap-2 mb-4">
-                              {project.tags.map((tag, tagIndex) => {
-                                 return (
-                                    <span
-                                       key={tagIndex}
-                                       className="px-3 py-1 bg-[#006756] text-turquoise rounded-full text-sm flex items-center gap-1"
-                                    >
-                                       {tag.type === 'component' ? (
-                                          <tag.icon size={16} />
-                                       ) : (
-                                          <img
-                                             src={tag.icon}
-                                             alt=""
-                                             className="w-4 h-4"
-                                          />
-                                       )}
-                                       {tag.text}
-                                    </span>
-                                 )
-                              })}
+                        <div className=" p-6 flex flex-col justify-between flex-1">
+                           <div>
+                              <h3 className="text-blue text-xl mb-2">
+                                 {project.title}
+                              </h3>
+                              <p className=" mb-4">{project.description}</p>
+                              <div className="flex flex-wrap gap-2 mb-4">
+                                 {project.tags.map((tag, tagIndex) => {
+                                    return (
+                                       <span
+                                          key={tagIndex}
+                                          className="border border-ltblue px-3 py-1 text-dkblue rounded-md text-sm flex items-center gap-1"
+                                       >
+                                          {tag.type === 'component' ? (
+                                             <tag.icon size={16} />
+                                          ) : (
+                                             <img
+                                                src={tag.icon}
+                                                alt=""
+                                                className="w-4 h-4"
+                                             />
+                                          )}
+                                          {tag.text}
+                                       </span>
+                                    )
+                                 })}
+                              </div>
                            </div>
-                           <div className="flex gap-4">
+
+                           <div className="flex justify-center gap-2 md:gap-4">
                               <a
                                  href={project.liveUrl}
                                  target="_blank"
                                  rel="noopener noreferrer"
-                                 className="flex items-center gap-2 text-pink hover:text-orange transition-colors"
+                                 className="flex gap-1 px-5 py-3 bg-ltblue/60 text-dkblue  hover:text-white hover:bg-dkblue transition-colors rounded-full font-semibold shadow-lg"
                               >
                                  <ExternalLink size={18} />
                                  Lien direct
@@ -147,7 +148,7 @@ export default function Projects() {
                                  href={project.githubUrl}
                                  target="_blank"
                                  rel="noopener noreferrer"
-                                 className="flex items-center gap-2 text-pink hover:text-orange transition-colors"
+                                 className="flex gap-1 px-8 py-3 bg-ltblue/60 text-dkblue  hover:text-white hover:bg-dkblue transition-colors rounded-full font-semibold shadow-lg"
                                  onClick={
                                     project.githubUrl === 'on demand'
                                        ? (e) => {

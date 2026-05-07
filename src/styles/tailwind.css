@@ -9,7 +9,11 @@
    --color-green: #5bff09;
    --color-orange: #fd6500;
    --color-blue: #1b2cc1;
+   --color-dkblue: #0b1047;
+   --color-ltblue: #a6adf2;
 }
+
+/* fonts */
 
 @font-face {
    font-family: 'pointless';
@@ -47,8 +51,31 @@
    font-style: normal;
 }
 
-@keyframes sheen {
-   100% {
-      transform: rotateZ(60deg) translate(1em, -9em);
-   }
+/* gradients */
+
+.about-gradient {
+   background: #ffffff;
+   background: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 1) 97%,
+      rgba(30, 35, 54, 1) 100%
+   );
+}
+
+.gradient1 {
+   background: var(--color-dkblue);
+   background: linear-gradient(
+      0deg,
+      rgba(11, 16, 71, 1) 97%,
+      rgba(255, 255, 255, 1) 100%
+   );
+}
+
+.gradient2 {
+   background: white;
+   background: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 1) 95%,
+      rgba(11, 16, 71, 1) 100%
+   );
 }
