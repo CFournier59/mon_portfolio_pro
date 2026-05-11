@@ -46,10 +46,10 @@ export default function Header() {
                      Projets
                   </button>
                   <button
-                     onClick={() => scrollToSection('skills')}
+                     onClick={() => scrollToSection('prices')}
                      className=" transition-colors cursor-pointer text-lg hover:text-blue"
                   >
-                     Compétences
+                     Tarifs
                   </button>
                   <button
                      onClick={() => scrollToSection('contact')}
@@ -97,10 +97,10 @@ export default function Header() {
                      Projets
                   </button>
                   <button
-                     onClick={() => scrollToSection('skills')}
+                     onClick={() => scrollToSection('prices')}
                      className="text-left  transition-colors"
                   >
-                     Compétences
+                     Tarifs
                   </button>
                   <button
                      onClick={() => scrollToSection('contact')}

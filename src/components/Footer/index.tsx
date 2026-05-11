@@ -46,10 +46,10 @@ export default function Footer() {
                         </li>
                         <li>
                            <a
-                              href="#skills"
+                              href="#prices"
                               className=" hover:text-white text-white/80 transition-colors"
                            >
-                              Compétences
+                              Tarifs
                            </a>
                         </li>
                         <li>

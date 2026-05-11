@@ -2,7 +2,7 @@ import Header from './components/Header'
 import Intro from './components/Intro'
 import About from './components/About'
 import Projects from './components/Projects'
-import Skills from './components/Skills'
+import Prices from './components/Prices'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 
@@ -14,7 +14,7 @@ export default function App() {
             <Intro />
             <About />
             <Projects />
-            <Skills />
+            <Prices />
             <Contact />
          </main>
          <Footer />

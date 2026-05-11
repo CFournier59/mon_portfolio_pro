@@ -26,16 +26,16 @@ const skillCategories = [
 
 export default function Skills() {
    return (
-      <section id="skills" className="py-20 px-4 sm:px-6 lg:px-8 gradient2">
+      <section id="prices" className="py-20 px-4 sm:px-6 lg:px-8 gradient2">
          <div className="container mx-auto">
             <div className="max-w-6xl mx-auto">
                <div className="text-center mb-16">
                   <h2 className="text-blue text-3xl sm:text-4xl mb-4">
-                     Compétences & Expertise
+                     Tarifs
                   </h2>
                   <p className="text-lg text-dkblue max-w-2xl mx-auto">
-                     Technologies et outils que j'utilise, pour donner vie à mes
-                     projets.
+                     Pas de frais cachés, pas de sur-facturation. Juste les
+                     prix...
                   </p>
                </div>
 
