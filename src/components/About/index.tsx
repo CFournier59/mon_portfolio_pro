@@ -1,4 +1,52 @@
-import { Code, Palette, Rocket } from 'lucide-react'
+import {
+   Code,
+   Palette,
+   Rocket,
+   PiggyBank,
+   Handshake,
+   ShieldCheck,
+} from 'lucide-react'
+
+const attributes = [
+   {
+      logo: Rocket,
+      title: 'Rapidité et Performance',
+      description:
+         "J'optimise les performances pour garantir des expériences web rapides et fluides.",
+   },
+   {
+      logo: Palette,
+      title: 'Desing travaillé',
+      description:
+         'Je crée des interfaces utilisateur attrayantes avec une attention portée à chaque détail',
+   },
+
+   {
+      logo: ShieldCheck,
+      title: 'Protection des données',
+      description:
+         'Je reste informé des bonnes pratiques et mises à jour afin de garantir des applications sécurisées',
+   },
+   {
+      logo: PiggyBank,
+      title: 'Tarifs Attractifs',
+      description:
+         'En passant directement par un développeur pour monter votre projet, vous en maîtrisez les coûts',
+   },
+
+   {
+      logo: Handshake,
+      title: 'Proximité et Écoute',
+      description:
+         'Je travaille en collaboration directe afin de mieux cerner vos besoins tout en maintenant une communication humaine',
+   },
+   {
+      logo: Code,
+      title: 'Clean code',
+      description:
+         "J'écris du code propre, maintenable et performant pour des applications web de haute qualité",
+   },
+]
 
 export default function About() {
    return (
@@ -16,10 +64,9 @@ export default function About() {
                      C'est quoi ?
                   </h2>
                   <p className="text-lg text-dkblue max-w-2xl mx-auto">
-                     Je suis un développeur web passionné avec de l'expérience
-                     dans plusieurs métiers, allant de l'industrie du tourisme,
-                     en passant par la vente et gestion de commerce ainsi que
-                     les métiers de la mobilité douce.
+                     Ce sont les services d'un développeur indépendant. Que ça
+                     soit pour concrétiser la version digitale d'une idée ou
+                     encore améliorer votre visiblité, je
                   </p>
                </div>
 
@@ -56,44 +103,33 @@ export default function About() {
                      />
                   </div>
                </div>
-
+               <h3 className="text-blue text-2xl mb-4">
+                  Les avantages avec{' '}
+                  <span className="squarified text-4xl text-black">
+                     <span className="squarified text-blue">D</span>-vlop
+                  </span>{' '}
+                  :
+               </h3>
                <div className="grid sm:grid-cols-3 gap-8">
-                  <div className=" p-6 rounded-lg shadow-md text-center border-1 border-ltblue">
-                     <div className="inline-flex items-center justify-center w-16 h-16 bg-ltblue rounded-full mb-4">
-                        <Code className="text-dkblue" size={32} />
-                     </div>
-                     <h3 className="text-blue text-xl mb-2">Clean Code</h3>
-                     <p className="text-dkblue">
-                        J'écris du code propre, maintenable et performant pour
-                        des applications web de haute qualité
-                     </p>
-                  </div>
-
-                  <div className=" p-6 rounded-lg shadow-md text-center border-1 border-ltblue">
-                     <div className="inline-flex items-center justify-center w-16 h-16 bg-ltblue rounded-full mb-4">
-                        <Palette className="text-dkblue" size={32} />
-                     </div>
-                     <h3 className="text-blue text-xl mb-2">
-                        Design travaillé
-                     </h3>
-                     <p className="text-dkblue">
-                        Je crée des interfaces utilisateur attrayantes avec une
-                        attention portée à chaque détail.
-                     </p>
-                  </div>
-
-                  <div className=" p-6 rounded-lg shadow-md text-center border-1 border-ltblue">
-                     <div className="inline-flex items-center justify-center w-16 h-16 bg-ltblue rounded-full mb-4">
-                        <Rocket className="text-dkblue" size={32} />
-                     </div>
-                     <h3 className="text-blue text-xl mb-2">
-                        Rapidité et Performance
-                     </h3>
-                     <p className="text-dkblue">
-                        J'optimise les performances pour garantir des
-                        expériences web rapides et fluides.
-                     </p>
-                  </div>
+                  {attributes.map((attribute, index) => {
+                     const Icon = attribute.logo
+                     return (
+                        <div
+                           key={index}
+                           className=" p-6 rounded-lg shadow-md text-center border-1 border-ltblue"
+                        >
+                           <div className="inline-flex items-center justify-center w-16 h-16 bg-ltblue rounded-full mb-4">
+                              <Icon className="text-dkblue" size={32} />
+                           </div>
+                           <h3 className="text-blue text-xl mb-2">
+                              {attribute.title}
+                           </h3>
+                           <p className="text-dkblue">
+                              {attribute.description}
+                           </p>
+                        </div>
+                     )
+                  })}
                </div>
             </div>
          </div>
