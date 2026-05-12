@@ -1,4 +1,4 @@
-import { Mail, MapPin, Phone } from 'lucide-react'
+import { MapPin, Phone } from 'lucide-react'
 import { useState } from 'react'
 import emailjs from '@emailjs/browser'
 
@@ -45,12 +45,14 @@ export default function Contact() {
    }
 
    return (
-      <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8">
+      <section id="contact" className="gradient1 py-20 px-4 sm:px-6 lg:px-8">
          <div className="container mx-auto">
             <div className="max-w-6xl mx-auto">
                <div className="text-center mb-16">
-                  <h2 className="text-3xl sm:text-4xl mb-4">Contactez-moi</h2>
-                  <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                  <h2 className="text-ltblue text-3xl sm:text-4xl mb-4">
+                     Contactez-moi
+                  </h2>
+                  <p className="text-lg text-white max-w-2xl mx-auto">
                      Vous avez un projet en tête ou souhaitez simplement dire
                      bonjour ? N'hésitez pas à me contacter !
                   </p>
@@ -58,46 +60,34 @@ export default function Contact() {
 
                <div className="grid md:grid-cols-2 gap-12">
                   <div>
-                     <h3 className="text-2xl mb-6">Coordonnées</h3>
+                     <h3 className="text-ltblue text-2xl mb-6">Coordonnées</h3>
                      <div className="space-y-6">
                         <div className="flex items-start gap-4">
-                           <div className="p-3 bg-light-color rounded-lg">
-                              <Mail className="text-base-color" size={24} />
+                           <div className="p-3 bg-white rounded-full">
+                              <Phone className="text-dkblue" size={24} />
                            </div>
                            <div>
-                              <h4 className="mb-1">Email</h4>
-                              <p className="text-gray-600">
-                                 clementfournier.c@gmail.com
-                              </p>
+                              <h4 className="text-white mb-1">Téléphone</h4>
+                              <p className="text-white">0 777 120 444</p>
                            </div>
                         </div>
 
                         <div className="flex items-start gap-4">
-                           <div className="p-3 bg-light-color rounded-lg">
-                              <Phone className="text-base-color" size={24} />
+                           <div className="p-3 bg-white rounded-full">
+                              <MapPin className="text-dkblue" size={24} />
                            </div>
                            <div>
-                              <h4 className="mb-1">Téléphone</h4>
-                              <p className="text-gray-600">0 777 120 444</p>
-                           </div>
-                        </div>
-
-                        <div className="flex items-start gap-4">
-                           <div className="p-3 bg-light-color rounded-lg">
-                              <MapPin className="text-base-color" size={24} />
-                           </div>
-                           <div>
-                              <h4 className="mb-1">Réside à</h4>
-                              <p className="text-gray-600">Vienne, Isère</p>
+                              <h4 className="text-white mb-1">Réside à</h4>
+                              <p className="text-white">Vienne, Isère</p>
                            </div>
                         </div>
                      </div>
 
-                     <div className="mt-8 p-6 bg-gray-50 rounded-lg">
-                        <h4 className="mb-2">
+                     <div className="mt-8 p-6 bg-white rounded-lg">
+                        <h3 className="text-blue mb-2">
                            Donnez une vie digitale à vos idées !
-                        </h4>
-                        <p className="text-gray-600">
+                        </h3>
+                        <p className="text-dkblue">
                            Du commerce de proximité à des projets plus
                            ambitieux, quelque soit le domaine d'activité, je
                            suis toujours ouvert à de nouvelles opportunités et
@@ -107,11 +97,14 @@ export default function Contact() {
                   </div>
 
                   <div>
-                     <form onSubmit={handleSubmit} className="space-y-6">
+                     <form
+                        onSubmit={handleSubmit}
+                        className="space-y-6 bg-ltblue p-4 rounded-md"
+                     >
                         <div>
                            <label
                               htmlFor="name"
-                              className="block mb-2 text-gray-700"
+                              className="block mb-2 text-dkblue"
                            >
                               Nom
                            </label>
@@ -122,15 +115,15 @@ export default function Contact() {
                               value={formData.name}
                               onChange={handleChange}
                               required
-                              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-base-color focus:border-transparent"
-                              placeholder="Nom complet"
+                              className=" border w-full px-4 py-3 bg-white focus:outline-none focus:ring-2 focus:ring-base-color focus:border-transparent"
+                              placeholder="Nom complet..."
                            />
                         </div>
 
                         <div>
                            <label
                               htmlFor="email"
-                              className="block mb-2 text-gray-700"
+                              className="block mb-2 text-dkblue"
                            >
                               Email
                            </label>
@@ -141,7 +134,7 @@ export default function Contact() {
                               value={formData.email}
                               onChange={handleChange}
                               required
-                              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-base-color focus:border-transparent"
+                              className=" border w-full px-4 py-3 bg-white focus:outline-none focus:ring-2 focus:ring-base-color focus:border-transparent"
                               placeholder="votre.email@example.com"
                            />
                         </div>
@@ -149,7 +142,7 @@ export default function Contact() {
                         <div>
                            <label
                               htmlFor="message"
-                              className="block mb-2 text-gray-700"
+                              className="block mb-2 text-dkblue"
                            >
                               Message
                            </label>
@@ -160,14 +153,14 @@ export default function Contact() {
                               onChange={handleChange}
                               required
                               rows={5}
-                              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-base-color focus:border-transparent resize-none"
+                              className=" border w-full px-4 py-3 bg-white focus:outline-none focus:ring-2 focus:ring-base-color focus:border-transparent"
                               placeholder="Votre message..."
                            />
                         </div>
 
                         <button
                            type="submit"
-                           className="w-full px-8 py-3 bg-base-color text-white rounded-lg hover:bg-base-hover-color transition-colors"
+                           className="block mx-auto px-8 py-3 bg-white/60 text-dkblue  hover:text-white hover:bg-dkblue transition-colors rounded-full font-semibold shadow-lg"
                         >
                            Envoyer
                         </button>

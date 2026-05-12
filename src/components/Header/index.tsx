@@ -13,42 +13,47 @@ export default function Header() {
    }
 
    return (
-      <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-200">
+      <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b-2 border-blue">
          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex items-center justify-between h-16">
-               <div className="text-xl font-semibold">
-                  <span className="text-base-color">Clément</span> Fournier
+               <div
+                  className=" cursor-pointer"
+                  onClick={() => scrollToSection('home')}
+               >
+                  <p className="squarified text-5xl">
+                     <span className="squarified text-blue">D</span>-vlop
+                  </p>
                </div>
 
                {/* Desktop Navigation */}
-               <nav className="hidden md:flex items-center gap-8">
+               <nav className=" hidden md:flex items-center gap-8 ml-4">
                   <button
                      onClick={() => scrollToSection('home')}
-                     className="text-gray-700 hover:text-base-color transition-colors"
+                     className=" transition-colors cursor-pointer text-lg hover:text-blue"
                   >
                      Accueil
                   </button>
                   <button
                      onClick={() => scrollToSection('about')}
-                     className="text-gray-700 hover:text-base-color transition-colors"
+                     className=" transition-colors cursor-pointer text-lg hover:text-blue"
                   >
                      À propos
                   </button>
                   <button
                      onClick={() => scrollToSection('projects')}
-                     className="text-gray-700 hover:text-base-color transition-colors"
+                     className=" transition-colors cursor-pointer text-lg hover:text-blue"
                   >
                      Projets
                   </button>
                   <button
-                     onClick={() => scrollToSection('skills')}
-                     className="text-gray-700 hover:text-base-color transition-colors"
+                     onClick={() => scrollToSection('prices')}
+                     className=" transition-colors cursor-pointer text-lg hover:text-blue"
                   >
-                     Compétences
+                     Tarifs
                   </button>
                   <button
                      onClick={() => scrollToSection('contact')}
-                     className="px-4 py-2 bg-base-color text-white rounded-lg hover:bg-base-hover-color transition-colors"
+                     className=" transition-colors cursor-pointer text-lg hover:text-blue"
                   >
                      Contact
                   </button>
@@ -58,43 +63,48 @@ export default function Header() {
                <button
                   className="md:hidden p-2"
                   onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                  aria-label="Toggle mobile menu"
                >
-                  {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+                  {mobileMenuOpen ? (
+                     <X className="text-blue" size={30} />
+                  ) : (
+                     <Menu className="text-blue" size={30} />
+                  )}
                </button>
             </div>
          </div>
 
          {/* Mobile Navigation */}
          {mobileMenuOpen && (
-            <div className="md:hidden bg-white border-b border-gray-200">
-               <nav className="container mx-auto px-4 py-4 flex flex-col gap-4">
+            <div className="md:hidden ">
+               <nav className="container border-t-2 border-blue mx-auto px-4 py-4 flex flex-col gap-4">
                   <button
                      onClick={() => scrollToSection('home')}
-                     className="text-left text-gray-700 hover:text-base-color transition-colors"
+                     className="text-left  transition-colors"
                   >
-                     Home
+                     Accueil
                   </button>
                   <button
                      onClick={() => scrollToSection('about')}
-                     className="text-left text-gray-700 hover:text-base-color transition-colors"
+                     className="text-left  transition-colors"
                   >
-                     About
+                     À propos
                   </button>
                   <button
                      onClick={() => scrollToSection('projects')}
-                     className="text-left text-gray-700 hover:text-base-color transition-colors"
+                     className="text-left  transition-colors"
                   >
-                     Projects
+                     Projets
                   </button>
                   <button
-                     onClick={() => scrollToSection('skills')}
-                     className="text-left text-gray-700 hover:text-base-color transition-colors"
+                     onClick={() => scrollToSection('prices')}
+                     className="text-left  transition-colors"
                   >
-                     Skills
+                     Tarifs
                   </button>
                   <button
                      onClick={() => scrollToSection('contact')}
-                     className="px-4 py-2 bg-base-color text-white rounded-lg hover:bg-blue-700 transition-colors text-left"
+                     className="text-left  transition-colors"
                   >
                      Contact
                   </button>
