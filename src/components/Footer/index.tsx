@@ -1,4 +1,4 @@
-import { Github, Linkedin, Heart } from 'lucide-react'
+import { Github, Linkedin } from 'lucide-react'
 import Mentions from '../Mentions'
 
 export default function Footer() {
