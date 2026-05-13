@@ -8,7 +8,7 @@ RewriteCond %{HTTPS} off
 RewriteRule ^(.*)$ https://d-vlop.fr/$1 [L,R=301]
 
 # --- www -> non-www ---
-RewriteCond %{HTTP_HOST} ^www\.d-vlop.fr\.ovh$ [NC]
+RewriteCond %{HTTP_HOST} ^www\.d-vlop.fr\.fr$ [NC]
 RewriteRule ^(.*)$ https://d-vlop.fr/$1 [L,R=301]
 
 
