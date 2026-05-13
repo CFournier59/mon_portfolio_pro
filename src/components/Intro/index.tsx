@@ -12,7 +12,7 @@ export default function Intro() {
    return (
       <section
          id="home"
-         className="min-h-screen bg-cover bg-center bg-[url('/background.jpg')] flex items-center justify-center pt-16 px-4 sm:px-6 lg:px-8 mt-8"
+         className="min-h-screen bg-cover bg-center bg-[url('/background.webp')] flex items-center justify-center pt-16 px-4 sm:px-6 lg:px-8 mt-8"
       >
          <div className="container mx-auto">
             <div className="max-w-4xl mx-auto text-center">

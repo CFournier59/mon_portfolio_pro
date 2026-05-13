@@ -3,25 +3,12 @@
 @import 'tailwindcss';
 
 @theme {
-   --color-pink: #fe00a9;
-   --color-turquoise: #00fed4;
-   --color-yellow: #fefe00;
-   --color-green: #5bff09;
-   --color-orange: #fd6500;
    --color-blue: #1b2cc1;
    --color-dkblue: #0b1047;
    --color-ltblue: #a6adf2;
 }
 
 /* fonts */
-
-@font-face {
-   font-family: 'pointless';
-   src: url('/fonts/Pointless.woff2') format('woff2');
-   font-weight: 400;
-   font-style: normal;
-   font-display: optional;
-}
 
 @font-face {
    font-family: 'squarified';
@@ -37,18 +24,8 @@
    font-style: normal;
 }
 
-.pointless {
-   font-family: pointless, sans-serif;
-}
-
 .squarified {
    font-family: squarified, sans-serif;
-}
-
-.play-bold {
-   font-family: 'Play', sans-serif;
-   font-weight: 700;
-   font-style: normal;
 }
 
 /* gradients */

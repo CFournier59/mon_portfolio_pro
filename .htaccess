@@ -5,11 +5,11 @@ RewriteEngine On
 
 # --- HTTP -> HTTPS ---
 RewriteCond %{HTTPS} off
-RewriteRule ^(.*)$ https://clementdeveloppe.ovh/$1 [L,R=301]
+RewriteRule ^(.*)$ https://d-vlop.fr/$1 [L,R=301]
 
-# --- non-www -> www ---
-RewriteCond %{HTTP_HOST} ^www\.clementdeveloppe\.ovh$ [NC]
-RewriteRule ^(.*)$ https://clementdeveloppe.ovh/$1 [L,R=301]
+# --- www -> non-www ---
+RewriteCond %{HTTP_HOST} ^www\.d-vlop.fr\.ovh$ [NC]
+RewriteRule ^(.*)$ https://d-vlop.fr/$1 [L,R=301]
 
 
 ############################################
@@ -73,7 +73,7 @@ AddOutputFilterByType DEFLATE text/html text/plain text/css text/javascript appl
 # 🛑 5) Protection hotlinking (empêche vol d’images)
 ############################################
 
-RewriteCond %{HTTP_REFERER} !^https://(www\.)?clementdeveloppe\.ovh/ [NC]
+RewriteCond %{HTTP_REFERER} !^https://(www\.)?d-vlop\.fr/ [NC]
 RewriteCond %{HTTP_REFERER} !^$
 RewriteRule \.(jpg|jpeg|png|gif|webp)$ - [F,NC]
 
