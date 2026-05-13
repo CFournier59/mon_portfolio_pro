@@ -52,7 +52,7 @@ export default function Mentions() {
                      Fournier
                   </p>
                   <p className="md:text-lg">
-                     <strong>Contact: </strong>06 31 24 00 28 -
+                     <strong>Contact: </strong>07 77 12 04 44 -
                      contact@d-vlop.fr
                   </p>
                </section>
