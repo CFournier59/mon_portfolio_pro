@@ -1,4 +1,5 @@
 import { Github, Linkedin, Heart } from 'lucide-react'
+import Mentions from '../Mentions'
 
 export default function Footer() {
    const currentYear = new Date().getFullYear()
@@ -90,17 +91,9 @@ export default function Footer() {
 
                <div className="border-t border-black pt-8 text-center ">
                   <p className="flex items-center justify-center gap-2">
-                     © {currentYear} Clément Développe. Tous droits réservés.
+                     © {currentYear} D-vlop. Tous droits réservés.
                   </p>
-                  <p className="flex items-center justify-center gap-2">
-                     Fait avec{' '}
-                     <Heart
-                        size={16}
-                        className="text-red-500"
-                        fill="currentColor"
-                     />{' '}
-                     et beaucoup de café.
-                  </p>
+                  <Mentions />
                </div>
             </div>
          </div>
