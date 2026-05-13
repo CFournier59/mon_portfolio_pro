@@ -97,6 +97,10 @@ export default function Contact() {
                   </div>
 
                   <div>
+                     <h3 className="text-ltblue text-2xl mb-6">
+                        Formulaire de contact
+                     </h3>
+
                      <form
                         onSubmit={handleSubmit}
                         className="space-y-6 bg-ltblue p-4 rounded-md"
