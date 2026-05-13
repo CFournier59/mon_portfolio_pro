@@ -65,8 +65,9 @@ export default function About() {
                   </h2>
                   <p className="text-lg text-dkblue max-w-2xl mx-auto">
                      Ce sont les services d'un développeur indépendant. Que ça
-                     soit pour concrétiser la version digitale d'une idée ou
-                     encore améliorer votre visiblité, je
+                     soit pour développer un outil numérique encore améliorer
+                     votre visiblité sur le net via un site web professionnel,
+                     je mets mes compétences à l'œuvre pour votre projet.
                   </p>
                </div>
 
