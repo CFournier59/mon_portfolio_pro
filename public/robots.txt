@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://clementdeveloppe.ovh/sitemap.xml
+Sitemap: https://d-vlop.fr/sitemap.xml
