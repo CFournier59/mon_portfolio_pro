@@ -2,6 +2,7 @@ import kasaPicture from '../../assets/projects/kasa.webp'
 import ninaCarducciPicture from '../../assets/projects/nina_carducci.webp'
 import tmcPicture from '../../assets/projects/tmc.webp'
 import emmaPicture from '../../assets/projects/emma_imberlin.webp'
+import dognlovePicture from '../../assets/projects/dognlove.webp'
 import { ExternalLink, Github, Atom, CodeXml, TowerControl } from 'lucide-react'
 import jsIcon from '../../assets/logos/jsicon.webp'
 import tsIcon from '../../assets/logos/tsicon.webp'
@@ -13,7 +14,20 @@ import type { Project } from './types'
 
 const projects: Project[] = [
    {
-      title: 'Emma Imberlin, psychologue clinicienne',
+      title: "Dog'N'Love : dogwalking, pension et éducation canine",
+      description:
+         "Le site conçu en single page application (SPA) offre une expérience utilisateur fluide et intuitive. Il intégre des métadonnées optimisées pour le référencement (SEO) et un widget de chat qui redirige sur l'application Whatsapp: le canal d'aquisition privilégié par le client.",
+      image: { src: dognlovePicture, alt: "Aperçu du projet Dog'N'Love" },
+      tags: [
+         { text: 'JavaScript', icon: jsIcon, type: 'image' },
+         { text: 'HTML', icon: CodeXml, type: 'component' },
+         { text: 'Tailwind CSS', icon: tailwindIcon, type: 'image' },
+      ],
+      liveUrl: 'https://dognlove.com',
+      githubUrl: 'on demand',
+   },
+   {
+      title: 'Emma Imberlin : psychologue clinicienne',
       description:
          'Le design et la charte graphique du site ont été pensés autour du logo fourni par Emma. Grâce à une interface intuitive et épurée sur tous les supports, les utilisateurs peuvent réserver une consultation directement via une API de google intégrée au site. ',
       image: { src: emmaPicture, alt: 'Aperçu du projet Emma Imberlin' },
@@ -78,7 +92,10 @@ export default function Projects() {
    }
 
    return (
-      <section id="projects" className="gradient1 py-20 px-4 sm:px-6 lg:px-8">
+      <section
+         id="projects"
+         className="bg-[url('/background2.webp')] gradient1 py-20 px-4 sm:px-6 lg:px-8"
+      >
          <div className="container mx-auto">
             <div className="max-w-6xl mx-auto">
                <div className="text-center mb-16">
