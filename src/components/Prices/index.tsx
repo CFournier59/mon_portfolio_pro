@@ -1,6 +1,7 @@
 import { ArrowDown, ArrowRight } from 'lucide-react'
+import Product from '../Product'
 
-export default function Skills() {
+export default function Price() {
    return (
       <section id="prices" className="py-20 px-4 sm:px-6 lg:px-8 gradient2">
          <div className="container mx-auto">
@@ -14,7 +15,59 @@ export default function Skills() {
                      prix...
                   </p>
                </div>
-               <div className="flex flex-col gap-4 lg:flex-row h-full items-stretch">
+               <div className="flex flex-col gap-4 h-full items-stretch">
+                  <Product
+                     title="Taux journalier"
+                     description="Journée d'honoraires pouvant inclure un ou plusieurs des services ci-dessous :"
+                     specs={[
+                        'design',
+                        'développement',
+                        'maintenance',
+                        'optimisation',
+                        'déploiement',
+                        'conseil marketing',
+                     ]}
+                     priceTag={199}
+                  />
+                  <Product
+                     title="Hébergement web standard"
+                     description="Hébergement d'un projet web frontend (html, css, javascript) incluant les services suivants :"
+                     specs={[
+                        'mise en ligne continue',
+                        'location du nom de domaine',
+                        'connexion HTTPS et certificat SSL',
+                        'protection contre les attaques DDos',
+                        'Assistance technique',
+                     ]}
+                     priceTag={7}
+                     monthly={true}
+                  />
+                  <Product
+                     title="Hébergement API"
+                     description="Hébergement d'une API côté serveur (Ubuntu, nodeJS) incluant les services suivants :"
+                     specs={[
+                        'connexion HTTPS et certificat SSL',
+                        'maintenance et mise à jour des paquets et dépendances',
+                        'Assistance technique',
+                     ]}
+                     priceTag={4.6}
+                     monthly={true}
+                  />
+                  <Product
+                     title="Hébergement web intégral"
+                     description="Hébergement d'un projet web frontend + backend incluant les services suivants :"
+                     specs={[
+                        'mise en ligne continue',
+                        'location du nom de domaine',
+                        'connexion HTTPS et certificat SSL',
+                        'maintenance et mise à jour des paquets et dépendances',
+                        'Assistance technique',
+                     ]}
+                     priceTag={9.6}
+                     monthly={true}
+                  />
+               </div>
+               {/* 
                   <div className="flex flex-col flex-1 justify-between border border-ltblue shadow-lg rounded-md px-4">
                      <div className="py-4">
                         <h3 className="text-blue text-2xl mb-4">
@@ -76,8 +129,8 @@ export default function Skills() {
                            <p className="text-xl text-black">/ mois</p>
                         </div>
                      </div>
-                  </div>
-               </div>
+                  </div> 
+               </div>*/}
 
                <h3 className="text-blue text-center text-2xl mt-6 mb-4">
                   Comment ça se passe ?
